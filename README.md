@@ -171,7 +171,7 @@ yarn upgrade
 Si le projet utilise un export statique, voici comment régénérer `/out` :
 
 ```bash
-yarn build && yarn export
+yarn build
 ```
 
 ---

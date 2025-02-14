@@ -1,12 +1,6 @@
 import TeamModsTable, { TeamTableProps } from "@/app/components/teamTable/table";
 import { notFound } from "next/navigation";
 
-interface TeamPageProps {
-    params: {
-        team: string;
-    };
-}
-
 export const generateStaticParams = () => {
     const teams = ["jmk"];
     return teams.map((team) => ({ team }));
@@ -65,7 +59,8 @@ const teamData: Record<string, TeamTableProps> = {
     },
 };
 
-const TeamPage = async ({ params }: TeamPageProps) => {
+const TeamPage = async (props: { params: Promise<{ team: string }> }) => {
+    const { params } = props;
     const { team } = await params;
 
     if (!teamData[team]) {
