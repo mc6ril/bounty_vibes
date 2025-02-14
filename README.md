@@ -180,3 +180,4 @@ yarn build
 
 Tu as maintenant toutes les bases pour travailler efficacement avec **Git**, **GitHub** et **Next.js** !  
 Si tu as des questions, n’hésite pas à me demander. 🚀
+hello the community
