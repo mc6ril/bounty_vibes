@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     output: "export",
     images: {
         domains: ["swgoh.gg", "swgoh.wiki"],
+        unoptimized: true
     },
 };
 
