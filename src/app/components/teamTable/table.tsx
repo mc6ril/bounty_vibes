@@ -1,3 +1,4 @@
+import Images from "@/app/assets/images";
 import Image from "next/image";
 import React from "react";
 
@@ -12,7 +13,7 @@ export interface TeamTableProps {
     data: {
         characters: chsType[];
         sets: string[];
-        primaryIcons: string[];
+        primaryIcons: Images[];
         primary: string[][];
         secondary: string[][];
         stats: string[][];
@@ -74,10 +75,10 @@ const TeamModsTable: React.FC<TeamTableProps> = ({ teamName, data }) => {
                         <td rowSpan={data.secondary.length + 1}>
                             <strong>SECONDARY</strong>
                         </td>
-                        <td rowSpan={data.secondary.length + 2}></td>
                     </tr>
                     {data.secondary.map((row, rowIndex) => (
                         <tr key={rowIndex}>
+                            <td>{data.secondary[rowIndex] && <p>{rowIndex+1}</p>}</td>
                             {row.map((value, index) => (
                                 <td key={index}>{value}</td>
                             ))}
