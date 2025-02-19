@@ -1,5 +1,5 @@
 import Images from "@/app/assets/images";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 
 type chsType = {
@@ -13,7 +13,7 @@ export interface TeamTableProps {
     data: {
         characters: chsType[];
         sets: string[];
-        primaryIcons: Images[];
+        primaryIcons: StaticImageData[];
         primary: string[][];
         secondary: string[][];
         stats: string[][];
