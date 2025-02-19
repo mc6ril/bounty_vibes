@@ -1,2 +1,2 @@
-enum Images{attack=require("./attack.png"),crit=require("./critx2.png"),dmgcrit=require("./dmgcrit.png")}
+enum Images{attack=require("./attack.png"),crit=require("./critx2.png"),croix=require("./croix.png"),def=require("./def.png"),dmgcrit=require("./dmgcrit.png"),fleche=require("./fleche.png"),health=require("./health.png"),potency=require("./potency.png"),rond=require("./rond.png"),speed=require("./speed.png"),triangle=require("./triangle.png")}
 export default Images

@@ -39,7 +39,7 @@ const teamData: Record<string, TeamTableProps> = {
                 },
             ],
             sets: [],
-            primaryIcons: [Images.attack,Images.crit],
+            primaryIcons: [Images.fleche,Images.triangle,Images.rond,Images.croix],
             primary: [
                 ["Speed", "Speed", "Offense", "Health", "Health"],
                 ["Critical Damage", "Critical Damage", "Critical Damage", "Health", "Health"],

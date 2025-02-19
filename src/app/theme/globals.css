@@ -87,8 +87,7 @@ td[colspan] {
 
 /* Ajustement des images des personnages et des icônes */
 img {
-    border-radius: 50%;
-    border: 2px solid #555;
+    border-radius: 10%;
 }
 
 /* Ajout d'une bordure plus marquée pour la première colonne */

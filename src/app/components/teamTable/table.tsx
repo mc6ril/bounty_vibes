@@ -56,7 +56,7 @@ const TeamModsTable: React.FC<TeamTableProps> = ({ teamName, data }) => {
                     </tr>
                     {data.primary.map((row, rowIndex) => (
                         <tr key={rowIndex}>
-                            <td>{data.primaryIcons[rowIndex] && <Image src={data.primaryIcons[rowIndex]} alt="Mod Icon" width={30} height={30} />}</td>
+                            <td>{data.primaryIcons[rowIndex] && <Image src={data.primaryIcons[rowIndex]} alt="Mod Icon" width={35} height={35} />}</td>
                             {row.map((value, index) => (
                                 <td key={index}>{value}</td>
                             ))}
