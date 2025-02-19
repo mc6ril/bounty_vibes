@@ -1,33 +1,36 @@
-enum Images{attack=require("./attack.png"),
-    crit=require("./critx2.png"),
-    croix=require("./croix.png"),
-    setdef=require("./setdef.png"),
-    dmgcrit=require("./dmgcrit.png"),
-    fleche=require("./fleche.png"),
-    health=require("./health.png"),
-    potency=require("./potency.png"),
-    rond=require("./rond.png"),
-    speed=require("./speed.png"),
-    triangle=require("./triangle.png"),
-    cinqfrere=require("./cinqfrere.png"),
-    huitfrere=require("./huitfrere.png"),
-    cat=require("./cat.png"),
-    cls=require("./cls.png"),
-    ezraexile=require("./ezraexile.png"),
-    generalsyndu=require("./generalsyndu.png"),
-    gi=require("./gi.png"),
-    gk=require("./gk.png"),
-    glat=require("./glat.png"),
-    huyang=require("./huyang.png"),
-    hyoda=require("./hyoda.png"),
-    jkck=require("./jkck.png"),
-    jkl=require("./jkl.png"),
-    jmk=require("./jmk.png"),
-    jml=require("./jml.png"),
-    padawansabine=require("./padawansabine.png"),
-    padme=require("./padme.png"),
-    reva=require("./reva.png"),
-    revan=require("./revan.png"),
-    septsoeur=require("./septsoeur.png"),
-    snips=require("./snips.png")}
-export default Images
+import attack from "@/app/assets/images/attack.png";
+import crit from "@/app/assets/images/critx2.png";
+import croix from "@/app/assets/images/croix.png";
+import setdef from "@/app/assets/images/setdef.png";
+import dmgcrit from "@/app/assets/images/dmgcrit.png";
+import fleche from "@/app/assets/images/fleche.png";
+import health from "@/app/assets/images/health.png";
+import potency from "@/app/assets/images/potency.png";
+import rond from "@/app/assets/images/rond.png";
+import speed from "@/app/assets/images/speed.png";
+import triangle from "@/app/assets/images/triangle.png";
+import cinqfrere from "@/app/assets/images/cinqfrere.png";
+import huitfrere from "@/app/assets/images/huitfrere.png";
+import cat from "@/app/assets/images/cat.png";
+import cls from "@/app/assets/images/cls.png";
+import ezraexile from "@/app/assets/images/ezraexile.png";
+import generalsyndu from "@/app/assets/images/generalsyndu.png";
+import gi from "@/app/assets/images/gi.png";
+import gk from "@/app/assets/images/gk.png";
+import glat from "@/app/assets/images/glat.png";
+import huyang from "@/app/assets/images/huyang.png";
+import hyoda from "@/app/assets/images/hyoda.png";
+import jkck from "@/app/assets/images/jkck.png";
+import jkl from "@/app/assets/images/jkl.png";
+import jmk from "@/app/assets/images/jmk.png";
+import jml from "@/app/assets/images/jml.png";
+import padawansabine from "@/app/assets/images/padawansabine.png";
+import padme from "@/app/assets/images/padme.png";
+import reva from "@/app/assets/images/reva.png";
+import revan from "@/app/assets/images/revan.png";
+import septsoeur from "@/app/assets/images/septsoeur.png";
+import snips from "@/app/assets/images/snips.png";
+
+const Images = {attack, crit, croix, setdef, dmgcrit, fleche, health, potency, rond, speed, triangle, cinqfrere, huitfrere, cat, cls, ezraexile, generalsyndu, gi, gk, glat, huyang, hyoda, jkck, jkl, jmk, jml, padawansabine, padme, reva, revan, septsoeur, snips }; 
+
+export default Images;
