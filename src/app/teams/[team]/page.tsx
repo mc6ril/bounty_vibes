@@ -14,32 +14,32 @@ const teamData: Record<string, TeamTableProps> = {
             characters: [
                 {
                     name: "Jedi Master Kenobi",
-                    image: "", //lien
+                    image: Images.jmk,
                     relic: "Rel 7",
                 },
                 {
                     name: "Commander Ahsoka Tano",
-                    image: "",
+                    image: Images.cat,
                     relic: "Rel 5 / 7",
                 },
                 {
                     name: "Ahsoka Tano (Snips)",
-                    image: "",
+                    image: Images.snips,
                     relic: "Rel 5 / 7",
                 },
                 {
                     name: "Padme Amidala",
-                    image: "",
+                    image: Images.padme,
                     relic: "Rel 7",
                 },
                 {
                     name: "General Kenobi",
-                    image: "",
+                    image: Images.gk,
                     relic: "Rel 8 / 9",
                 },
             ],
             sets: [],
-            primaryIcons: [Images.attack,Images.crit],
+            primaryIcons: [Images.fleche,Images.triangle,Images.rond,Images.croix],
             primary: [
                 ["Speed", "Speed", "Offense", "Health", "Health"],
                 ["Critical Damage", "Critical Damage", "Critical Damage", "Health", "Health"],

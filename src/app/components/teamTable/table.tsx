@@ -1,5 +1,5 @@
 import Images from "@/app/assets/images";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 
 type chsType = {
@@ -13,7 +13,7 @@ export interface TeamTableProps {
     data: {
         characters: chsType[];
         sets: string[];
-        primaryIcons: Images[];
+        primaryIcons: StaticImageData[];
         primary: string[][];
         secondary: string[][];
         stats: string[][];
@@ -56,7 +56,7 @@ const TeamModsTable: React.FC<TeamTableProps> = ({ teamName, data }) => {
                     </tr>
                     {data.primary.map((row, rowIndex) => (
                         <tr key={rowIndex}>
-                            <td>{data.primaryIcons[rowIndex] && <Image src={data.primaryIcons[rowIndex]} alt="Mod Icon" width={30} height={30} />}</td>
+                            <td>{data.primaryIcons[rowIndex] && <Image src={data.primaryIcons[rowIndex]} alt="Mod Icon" width={35} height={35} />}</td>
                             {row.map((value, index) => (
                                 <td key={index}>{value}</td>
                             ))}

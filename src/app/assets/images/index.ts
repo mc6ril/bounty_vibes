@@ -1,2 +1,36 @@
-enum Images{attack=require("./attack.png"),crit=require("./critx2.png"),dmgcrit=require("./dmgcrit.png")}
-export default Images
+const Images = {
+    attack: require("./attack.png").default,
+    crit: require("./critx2.png").default,
+    croix: require("./croix.png").default,
+    setdef: require("./setdef.png").default,
+    dmgcrit: require("./dmgcrit.png").default,
+    fleche: require("./fleche.png").default,
+    health: require("./health.png").default,
+    potency: require("./potency.png").default,
+    rond: require("./rond.png").default,
+    speed: require("./speed.png").default,
+    triangle: require("./triangle.png").default,
+    cinqfrere: require("./cinqfrere.png").default,
+    huitfrere: require("./huitfrere.png").default,
+    cat: require("./cat.png").default,
+    cls: require("./cls.png").default,
+    ezraexile: require("./ezraexile.png").default,
+    generalsyndu: require("./generalsyndu.png").default,
+    gi: require("./gi.png").default,
+    gk: require("./gk.png").default,
+    glat: require("./glat.png").default,
+    huyang: require("./huyang.png").default,
+    hyoda: require("./hyoda.png").default,
+    jkck: require("./jkck.png").default,
+    jkl: require("./jkl.png").default,
+    jmk: require("./jmk.png").default,
+    jml: require("./jml.png").default,
+    padawansabine: require("./padawansabine.png").default,
+    padme: require("./padme.png").default,
+    reva: require("./reva.png").default,
+    revan: require("./revan.png").default,
+    septsoeur: require("./septsoeur.png").default,
+    snips: require("./snips.png").default,
+} as const;
+
+export default Images;
