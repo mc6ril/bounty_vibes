@@ -52,7 +52,7 @@ const TeamModsTable: React.FC<TeamTableProps> = ({ teamName, data }) => {
                         ))}
                     </tr>
                     <tr>
-                        <td rowSpan={data.primary.length + 1} colSpan={1}><strong>PRIMARY</strong></td>
+                        <td rowSpan={data.primary.length + 1} colSpan={1} style={{ writingMode: "vertical-rl", textOrientation: "mixed", transform: "rotate(180deg)"}}><strong>PRIMARY</strong></td>
                     </tr>
                     {data.primary.map((row, rowIndex) => (
                         <tr key={rowIndex}>
@@ -63,7 +63,7 @@ const TeamModsTable: React.FC<TeamTableProps> = ({ teamName, data }) => {
                         </tr>
                     ))}
                     <tr>
-                        <td rowSpan={data.secondary.length + 1} colSpan={1}><strong>SECONDARY</strong></td>
+                        <td rowSpan={data.secondary.length + 1} colSpan={1} style={{ writingMode: "vertical-rl", textOrientation: "mixed", transform: "rotate(180deg)"}}><strong>SECONDARY</strong></td>
                     </tr>
                     {data.secondary.map((row, rowIndex) => (
                         <tr key={rowIndex}>
@@ -74,7 +74,7 @@ const TeamModsTable: React.FC<TeamTableProps> = ({ teamName, data }) => {
                         </tr>
                     ))}
                     <tr>
-                        <td rowSpan={data.stats.length + 1} colSpan={1}><strong>STATS</strong></td>
+                        <td rowSpan={data.stats.length + 1} colSpan={1} style={{ writingMode: "vertical-rl", textOrientation: "mixed", transform: "rotate(180deg)"}}><strong>STATS</strong></td>
                     </tr>
                     {data.stats.map((row, rowIndex) => (
                         <tr key={rowIndex}>
