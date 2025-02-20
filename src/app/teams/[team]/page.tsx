@@ -38,7 +38,23 @@ const teamData: Record<string, TeamTableProps> = {
           relic: "Rel 8 / 9",
         },
       ],
-      sets: [],
+      sets: [
+        {
+          images: [Images.speed, Images.health],
+        },
+        {
+          images: [Images.speed, Images.health],
+        },
+        {
+          images: [Images.attack, Images.health],
+        },
+        {
+          images: [Images.health, Images.health, Images.health],
+        },
+        {
+          images: [Images.health, Images.health, Images.health],
+        },
+      ],
       primaryIcons: [Images.fleche, Images.triangle, Images.rond, Images.croix],
       primary: [
         ["Speed", "Speed", "Offense", "Health", "Health"],

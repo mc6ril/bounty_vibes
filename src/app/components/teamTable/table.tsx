@@ -4,16 +4,20 @@ import React from "react";
 
 type chsType = {
   name: string;
-  image: Images;
+  image: string ;
   relic: string;
+};
+
+type SetType = {
+  images: string[]; // Un set peut avoir plusieurs images
 };
 
 export interface TeamTableProps {
   teamName: string;
   data: {
     characters: chsType[];
-    sets: string[];
-    primaryIcons: Images[];
+    sets: SetType[];
+    primaryIcons: string[];
     primary: string[][];
     secondary: string[][];
     stats: string[][];
@@ -62,7 +66,23 @@ const TeamModsTable: React.FC<TeamTableProps> = ({ teamName, data }) => {
               <strong>SETS</strong>
             </td>
             {data.sets.map((set, index) => (
-              <td key={index}>{set}</td>
+              <td key={index}>
+              {set.images && set.images.length > 0 ? (
+                set.images.map((img, imgIndex) => (
+                  <Image
+                    key={imgIndex}
+                    src={img}
+                    alt="Set Image"
+                    width="35"
+                    height="35"
+                    unoptimized={true}
+                    style={{ margin: "2px" }}
+                  />
+                ))
+              ) : (
+                <p>—</p> // Affiche un tiret si aucune image n'est disponible
+              )}
+            </td>
             ))}
           </tr>
           <tr>
