@@ -58,7 +58,7 @@ thead th {
 }
 
 /* Bordures et espacement */
-td,
+td ,
 th {
   border: 2px solid #444;
   padding: 10px;

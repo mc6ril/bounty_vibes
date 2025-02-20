@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const TeamsPage = () => {
-  const teams = ["jmk", "cls", "reva"];
+  const teams = ["jmk", "cls", "reva","test"];
 
   return (
     <div>

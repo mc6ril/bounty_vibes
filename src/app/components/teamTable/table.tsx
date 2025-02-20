@@ -145,7 +145,7 @@ const TeamModsTable: React.FC<TeamTableProps> = ({ teamName, data }) => {
             </tr>
           ))}
           <tr>
-            <td>
+            <td colSpan={2}>
               <strong>INFOS</strong>
             </td>
             <td colSpan={data.characters.length + 2}>{data.infos}</td>
