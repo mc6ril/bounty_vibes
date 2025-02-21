@@ -3,12 +3,12 @@ import { notFound } from "next/navigation";
 import Images from "@/app/assets/images";
 
 export const generateStaticParams = () => {
-  const teams = ["jmk", "cls"];
+  const teams = ["JMK", "CLS", "Reva","Aphra","Leia","GLAT","JML","LV","Rey","SK","UFU","SLKR"];
   return teams.map((team) => ({ team }));
 };
 
 const teamData: Record<string, TeamTableProps> = {
-  jmk: {
+  JMK: {
     teamName: "JMK",
     data: {
       characters: [
@@ -75,7 +75,76 @@ const teamData: Record<string, TeamTableProps> = {
       infos: "If you don't have Commander Ahsoka Tano (CAT) then she can be replaced with Master Yoda in the meantime.",
     },
   },
-  cls: {
+  GLAT: {
+    teamName: "GLAT",
+    data: {
+      characters: [
+        {
+          name: "Ahsoka Tano",
+          image: Images.glat,
+          relic: "Rel 9",
+        },
+        {
+          name: "General Syndulla",
+          image: Images.generalsyndu,
+          relic: "Rel 7 / 8",
+        },
+        {
+          name: "Huyang",
+          image: Images.huyang,
+          relic: "Rel 7 / 8",
+        },
+        {
+          name: "Padawan Sabine Wren",
+          image: Images.padawansabine,
+          relic: "Rel 7 / 8",
+        },
+        {
+          name: "Ezra Bridger (Exile)",
+          image: Images.ezraexile,
+          relic: "Rel 8 / 9",
+        },
+      ],
+      sets: [
+        {
+          images: [Images.speed, Images.health],
+        },
+        {
+          images: [Images.speed, Images.health],
+        },
+        {
+          images: [Images.attack, Images.crit],
+        },
+        {
+          images: [Images.dmgcrit, Images.health],
+        },
+        {
+          images: [Images.speed, Images.health],
+        },
+      ],
+      primaryIcons: [Images.fleche, Images.triangle, Images.rond, Images.croix],
+      primary: [
+        ["Speed / Health", "Speed", "Speed", "Speed", "Speed"],
+        ["Health", "Health / Protection", "Critical Damage", "Critical Damage", "Health"],
+        ["Health", "Health / Protection", "Health / Protection", "Health", "Health"],
+        ["Health", "Health / Protection", "Offense", "Offense", "Health"],
+      ],
+      secondary: [
+        ["Health %", "Speed", "Offense %", "Offense %", "Speed"],
+        ["Defense %", "Health / Protection %", "Speed", "Speed", "Health %"],
+        ["Speed", "Health / Protection %", "Critical Chance %", "Health %", "Offense %"],
+        ["Offense %", "", "Offense Flat", "Offense Flat", "Health Flat"],
+      ],
+      stats: [
+        ["Speed", "565+", "350+", "300+", "300+", "365+"],
+        ["Others", "Health > 200k", "", "Attack > 9k", "Attack > 9k", "Health > 90k"],
+		["", "Armor > 74%", "", "", "", ""],
+		["", "Attack > 6k2", "", "", "", ""],
+      ],
+      infos: "",
+    },
+  },
+  CLS: {
     teamName: "CLS",
     data: {
       characters: [
