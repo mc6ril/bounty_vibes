@@ -1,6 +1,7 @@
 import Images from "@/app/assets/images";
 import Image from "next/image";
 import React from "react";
+import "@/app/components/teamTable/table.css";
 
 type chsType = {
   name: string;
