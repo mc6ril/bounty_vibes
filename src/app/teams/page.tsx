@@ -1,9 +1,9 @@
 "use client"; // Rend le composant interactif
-import React from "react";
-import "./page.css"; // Fichier CSS pour le style
-import Link from "next/link";
 
-const teams = ["JMK", "CLS", "Reva", "Aphra", "Leia", "GLAT", "JML", "LV", "Rey", "SK", "UFU", "SLKR"];
+import React from "react";
+import "./page.css";
+import { teamsArray } from "../data";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,8 +12,11 @@ export default function Home() {
         <h1>Liste des teams</h1>
       </header>
       <div className="grid">
-        {teams.map((team) => (
-          <Link key={team} className="card" href={`/teams/${team}`}>
+        {teamsArray.map((team) => (
+          <Link
+            key={team}
+            className="card"
+            href={`/teams/${team}`}>
             {team}
           </Link>
         ))}

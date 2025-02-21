@@ -1,30 +1,7 @@
-import Images from "@/app/assets/images";
 import Image from "next/image";
 import React from "react";
 import "@/app/components/teamTable/table.css";
-
-type chsType = {
-  name: string;
-  image: Images ;
-  relic: string;
-};
-
-type SetType = {
-  images: Images[]; // Un set peut avoir plusieurs images
-};
-
-export interface TeamTableProps {
-  teamName: string;
-  data: {
-    characters: chsType[];
-    sets: SetType[];
-    primaryIcons: Images[];
-    primary: string[][];
-    secondary: string[][];
-    stats: string[][];
-    infos: string;
-  };
-}
+import { TeamTableProps } from "@/app/types/table";
 
 const TeamModsTable: React.FC<TeamTableProps> = ({ teamName, data }) => {
   return (
@@ -68,22 +45,22 @@ const TeamModsTable: React.FC<TeamTableProps> = ({ teamName, data }) => {
             </td>
             {data.sets.map((set, index) => (
               <td key={index}>
-              {set.images && set.images.length > 0 ? (
-                set.images.map((img, imgIndex) => (
-                  <Image
-                    key={imgIndex}
-                    src={img}
-                    alt="Set Image"
-                    width="35"
-                    height="35"
-                    unoptimized={true}
-                    style={{ margin: "2px" }}
-                  />
-                ))
-              ) : (
-                <p>—</p> // Affiche un tiret si aucune image n'est disponible
-              )}
-            </td>
+                {set.images && set.images.length > 0 ? (
+                  set.images.map((img, imgIndex) => (
+                    <Image
+                      key={imgIndex}
+                      src={img}
+                      alt="Set Image"
+                      width="35"
+                      height="35"
+                      unoptimized={true}
+                      style={{ margin: "2px" }}
+                    />
+                  ))
+                ) : (
+                  <p>—</p> // Affiche un tiret si aucune image n'est disponible
+                )}
+              </td>
             ))}
           </tr>
           <tr>
