@@ -1,22 +1,27 @@
-import Link from "next/link";
+"use client"; // Rend le composant interactif
 
-const TeamsPage = () => {
-  const teams = ["JMK", "CLS", "Reva","Aphra","Leia","GLAT","JML","LV","Rey","SK","UFU","SLKR"];
+import { useRouter } from "next/navigation"; // Import du router
+import React from "react";
+import "./page.css"; // Fichier CSS pour le style
+
+const teams = ["JMK", "CLS", "Reva", "Aphra", "Leia", "GLAT", "JML", "LV", "Rey", "SK", "UFU", "SLKR"];
+
+export default function Home() {
+  const router = useRouter(); // Initialisation du router
+
+  const handleClick = (team: string) => {
+    router.push(`/teams/${team}`); // Redirige vers la page de l'équipe
+  };
 
   return (
-    <div>
-      <h1>Liste des équipes</h1>
-      <ul>
-        {teams.map((team) => {
-          return (
-            <li key={team}>
-              <Link href={`/teams/${team}`}>{team}</Link>
-            </li>
-          );
-        })}
-      </ul>
+    <div className="container">
+      <div className="grid">
+        {teams.map((team) => (
+          <div key={team} className="card" onClick={() => handleClick(team)}>
+            {team}
+          </div>
+        ))}
+      </div>
     </div>
   );
-};
-
-export default TeamsPage;
+}

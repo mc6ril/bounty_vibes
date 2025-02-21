@@ -1,0 +1,35 @@
+/* Centrage de la liste */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    background-color: #f5f5f5;
+}
+
+/* Grille des dalles */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adaptable */
+    gap: 15px;
+    max-width: 600px; /* Largeur max */
+}
+
+/* Style des dalles */
+.card {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.3s;
+}
+
+/* Effet au survol */
+.card:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
