@@ -1,10 +1,19 @@
-/* Centrage de la liste */
+/* Conteneur principal */
 .container {
     display: flex;
+    flex-direction: column; /* Permet d'empiler les éléments */
     justify-content: center;
     align-items: center;
     height: 100vh; /* Prend toute la hauteur de l'écran */
     background-color: #f5f5f5;
+    padding: 20px; /* Ajoute un peu d'espace autour */
+}
+
+/* Titre en haut */
+h1 {
+    margin-bottom: 20px; /* Espace entre le titre et la grille */
+    font-size: 24px;
+    color: #222;
 }
 
 /* Grille des dalles */

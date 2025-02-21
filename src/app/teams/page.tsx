@@ -12,9 +12,10 @@ export default function Home() {
   const handleClick = (team: string) => {
     router.push(`/teams/${team}`); // Redirige vers la page de l'équipe
   };
-
+  
   return (
     <div className="container">
+      <h1>Liste des teams</h1>
       <div className="grid">
         {teams.map((team) => (
           <div key={team} className="card" onClick={() => handleClick(team)}>
