@@ -1,12 +1,12 @@
 {
-  "glat": "Ahsoka Tano",
-  "ashokaSnips": "Ahsoka Tano (Snips)",
-  "cat": "Commander Ahsoka Tano",
-  "ezraBridgerExil": "Ezra Bridger (Exile)",
-  "generalKenobi": "General Kenobi",
-  "generalSyndulla": "General Syndulla",
-  "huyang": "Huyang",
-  "jmk": "Jedi Master Kenobi",
-  "padawanSabine": "Padawan Sabine Wren",
-  "padmeAmidala": "Padme Amidala"
+  "glat": { "name": "Ahsoka Tano", "tag": ["Jedi", "Républicain"] },
+  "ashokaSnips": { "name": "Ahsoka Tano (Snips)", "tag": ["Padawan", "Clone Wars"] },
+  "cat": { "name": "Commander Ahsoka Tano", "tag": ["Commandant", "Jedi"] },
+  "ezraBridgerExil": { "name": "Ezra Bridger (Exile)", "tag": ["Rebelle", "Exilé"] },
+  "generalKenobi": { "name": "General Kenobi", "tag": ["Jedi", "Général"] },
+  "generalSyndulla": { "name": "General Syndulla", "tag": ["Rebelle", "Pilote"] },
+  "huyang": { "name": "Huyang", "tag": ["Droïde", "Savoir"] },
+  "jmk": { "name": "Jedi Master Kenobi", "tag": ["Jedi", "Maître"] },
+  "padawanSabine": { "name": "Padawan Sabine Wren", "tag": ["Mandalorien", "Padawan"] },
+  "padmeAmidala": { "name": "Padme Amidala", "tag": ["Sénatrice", "Politique"] }
 }

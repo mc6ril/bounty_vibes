@@ -7,27 +7,27 @@ const jmkTeam: TeamTableProps = {
   data: {
     characters: [
       {
-        name: ChsName.jmk,
+        name: ChsName.jmk.name,
         image: Images.jmk,
         relic: "Rel 7",
       },
       {
-        name: ChsName.cat,
+        name: ChsName.cat.name,
         image: Images.cat,
         relic: "Rel 5 / 7",
       },
       {
-        name: ChsName.ashokaSnips,
+        name: ChsName.ashokaSnips.name,
         image: Images.snips,
         relic: "Rel 5 / 7",
       },
       {
-        name: ChsName.padmeAmidala,
+        name: ChsName.padmeAmidala.name,
         image: Images.padme,
         relic: "Rel 7",
       },
       {
-        name: ChsName.generalKenobi,
+        name: ChsName.generalKenobi.name,
         image: Images.gk,
         relic: "Rel 8 / 9",
       },

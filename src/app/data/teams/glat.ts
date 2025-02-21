@@ -7,27 +7,27 @@ const glatTeam: TeamTableProps = {
   data: {
     characters: [
       {
-        name: ChsName.glat,
+        name: ChsName.glat.name,
         image: Images.glat,
         relic: "Rel 9",
       },
       {
-        name: ChsName.generalSyndulla,
+        name: ChsName.generalSyndulla.name,
         image: Images.generalsyndu,
         relic: "Rel 7 / 8",
       },
       {
-        name: ChsName.huyang,
+        name: ChsName.huyang.name,
         image: Images.huyang,
         relic: "Rel 7 / 8",
       },
       {
-        name: ChsName.padawanSabine,
+        name: ChsName.padawanSabine.name,
         image: Images.padawansabine,
         relic: "Rel 7 / 8",
       },
       {
-        name: ChsName.ezraBridgerExil,
+        name: ChsName.ezraBridgerExil.name,
         image: Images.ezraexile,
         relic: "Rel 8 / 9",
       },
