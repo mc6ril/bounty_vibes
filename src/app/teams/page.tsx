@@ -1,25 +1,21 @@
 "use client"; // Rend le composant interactif
-
-import { useRouter } from "next/navigation"; // Import du router
 import React from "react";
 import "./page.css"; // Fichier CSS pour le style
+import Link from "next/link";
 
 const teams = ["JMK", "CLS", "Reva", "Aphra", "Leia", "GLAT", "JML", "LV", "Rey", "SK", "UFU", "SLKR"];
 
 export default function Home() {
-  const router = useRouter(); // Initialisation du router
-
-  const handleClick = (team: string) => {
-    router.push(`/teams/${team}`); // Redirige vers la page de l'équipe
-  };
-
   return (
     <div className="container">
+      <header className="header">
+        <h1>Liste des teams</h1>
+      </header>
       <div className="grid">
         {teams.map((team) => (
-          <div key={team} className="card" onClick={() => handleClick(team)}>
+          <Link key={team} className="card" href={`/teams/${team}`}>
             {team}
-          </div>
+          </Link>
         ))}
       </div>
     </div>
