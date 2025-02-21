@@ -5,12 +5,12 @@ import "@/app/components/teamTable/table.css";
 
 type chsType = {
   name: string;
-  image: string ;
+  image: Images ;
   relic: string;
 };
 
 type SetType = {
-  images: string[]; // Un set peut avoir plusieurs images
+  images: Images[]; // Un set peut avoir plusieurs images
 };
 
 export interface TeamTableProps {
@@ -18,7 +18,7 @@ export interface TeamTableProps {
   data: {
     characters: chsType[];
     sets: SetType[];
-    primaryIcons: string[];
+    primaryIcons: Images[];
     primary: string[][];
     secondary: string[][];
     stats: string[][];
