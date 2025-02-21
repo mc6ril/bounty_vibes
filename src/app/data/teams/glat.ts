@@ -10,31 +10,26 @@ const glatTeam: TeamTableProps = {
         name: ChsName.glat.name,
         image: Images.glat,
         relic: "Rel 9",
-        tag: ChsName.glat.tag,
       },
       {
         name: ChsName.generalSyndulla.name,
         image: Images.generalsyndu,
         relic: "Rel 7 / 8",
-        tag: ChsName.generalSyndulla.tag,
       },
       {
         name: ChsName.huyang.name,
         image: Images.huyang,
         relic: "Rel 7 / 8",
-        tag: ChsName.huyang.tag,
       },
       {
         name: ChsName.padawanSabine.name,
         image: Images.padawansabine,
         relic: "Rel 7 / 8",
-        tag: ChsName.padawanSabine.tag,
       },
       {
         name: ChsName.ezraBridgerExil.name,
         image: Images.ezraexile,
         relic: "Rel 8 / 9",
-        tag: ChsName.ezraBridgerExil.tag,
       },
     ],
     sets: [

@@ -10,31 +10,26 @@ const jmkTeam: TeamTableProps = {
         name: ChsName.jmk.name,
         image: Images.jmk,
         relic: "Rel 7",
-        tag: ChsName.jmk.tag,
       },
       {
         name: ChsName.cat.name,
         image: Images.cat,
         relic: "Rel 5 / 7",
-        tag: ChsName.cat.tag,
       },
       {
         name: ChsName.ashokaSnips.name,
         image: Images.snips,
         relic: "Rel 5 / 7",
-        tag: ChsName.ashokaSnips.tag,
       },
       {
         name: ChsName.padmeAmidala.name,
         image: Images.padme,
         relic: "Rel 7",
-        tag: ChsName.padmeAmidala.tag,
       },
       {
         name: ChsName.generalKenobi.name,
         image: Images.gk,
         relic: "Rel 8 / 9",
-        tag: ChsName.generalKenobi.tag,
       },
     ],
     sets: [
