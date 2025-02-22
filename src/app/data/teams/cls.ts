@@ -1,4 +1,6 @@
+import Images from "@/app/assets/images";
 import { TeamTableProps } from "@/app/types/table";
+import { ChsName, SetsName } from "..";
 
 const clsTeam: TeamTableProps = {
   teamName: "CLS",
@@ -6,7 +8,7 @@ const clsTeam: TeamTableProps = {
     characters: [
       {
         name: "Commander Luke Skywalker",
-        image: "", //lien
+        image: Images.cls,
         relic: "Rel 7",
       },
       {
