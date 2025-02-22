@@ -28,5 +28,10 @@
   "boba": { "name": "Boba Fett", "tag": ["Leader", "Scoundrel", "Bounty Hunter", "Hutt Cartel"] },
   "boushh": { "name": "Boushh (Leia Organa)", "tag": ["Leader", "Scoundrel", "Bounty Hunter", "Hutt Cartel"] },
   "krrsantan": { "name": "Krrsantan", "tag": ["Leader", "Scoundrel", "Bounty Hunter", "Hutt Cartel", "Mercenary", "Wookiee"] },
-  "skifflando": { "name": "Skiff Guard (Lando Calrissian)", "tag": ["Scoundrel", "Smuggler", "Hutt Cartel"] }
+  "skifflando": { "name": "Skiff Guard (Lando Calrissian)", "tag": ["Scoundrel", "Smuggler", "Hutt Cartel"] },
+  "aphra": { "name": "Doctor Aphra", "tag": ["Leader", "Mercenary", "Scoundrel"] },
+  "ooo": { "name": "0-0-0", "tag": ["Droid", "Scoundrel"] },
+  "bt1": { "name": "BT-1", "tag": ["Droid", "Scoundrel"] },
+  "ig88": { "name": "IG-88", "tag": ["Leader", "Scoundrel", "Bounty Hunter", "Droid"] },
+  "sonde": { "name": "Imperial Probe Droid", "tag": ["Empire", "Droid"] }
 }

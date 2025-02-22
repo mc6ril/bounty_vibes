@@ -40,6 +40,11 @@ enum Images {
   skifflando = "/skifflando.png",
   boushh = "/boushh.png",
   krrsantan = "/krrsantan.png",
+  aphra = "/aphra.png",
+  ooo = "/0-0-0.png",
+  bt1 = "/bt-1.png",
+  ig88 = "/ig88.png",
+  sonde = "/sonde.png",
 }
 
 export default Images;

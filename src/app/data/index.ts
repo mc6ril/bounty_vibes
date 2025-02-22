@@ -15,5 +15,6 @@ export const teamsCharacters: Record<string, string[]> = {
   CLS: ["cls", "chewbacca", "c3po", "hansolo", "threepio"],
   JML: ["jml", "jkl", "revan", "jkck", "hyoda"],
   Reva: ["reva", "gi", "cinqfrere", "huitfrere", "septsoeur"],
-  Jabba: ["jabba", "boushh", "skifflando", "krrsantan", "boba"]
+  Jabba: ["jabba", "boushh", "skifflando", "krrsantan", "boba"],
+  Aphra: ["aphra", "ooo", "bt1", "ig88", "sonde"]
 };
