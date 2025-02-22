@@ -85,3 +85,12 @@ tbody tr:last-child td:first-child {
 tbody tr:last-child td:last-child {
     border-bottom-right-radius: 12px;
 }
+
+body {
+    background: url('/mustafar.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+h2 {
+    color: white;
+}
