@@ -1,13 +1,13 @@
 import TeamModsTable from "@/app/components/teamTable/table";
 import { notFound } from "next/navigation";
 import { teamsArray } from "@/app/data";
-import jmkTeam from "@/app/data/teams/jmk";
-import glatTeam from "@/app/data/teams/glat";
+import aphraTeam from "@/app/data/teams/aphra";
 import clsTeam from "@/app/data/teams/cls";
+import glatTeam from "@/app/data/teams/glat";
+import jabbaTeam from "@/app/data/teams/jabba";
+import jmkTeam from "@/app/data/teams/jmk";
 import jmlTeam from "@/app/data/teams/jml";
 import revaTeam from "@/app/data/teams/reva";
-import jabbaTeam from "@/app/data/teams/jabba";
-import aphraTeam from "@/app/data/teams/aphra";
 import { TeamTableProps } from "@/app/types/table";
 
 export const teamData: Record<string, TeamTableProps> = {
