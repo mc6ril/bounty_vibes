@@ -1,12 +1,12 @@
 {
-  "glat": { "name": "Ahsoka Tano", "tag": ["Jedi", "Républicain"] },
-  "ashokaSnips": { "name": "Ahsoka Tano (Snips)", "tag": ["Padawan", "Clone Wars"] },
-  "cat": { "name": "Commander Ahsoka Tano", "tag": ["Commandant", "Jedi"] },
+  "glat": { "name": "Ahsoka Tano", "tag": ["Leader", "Galactic Legend", "Spectre", "Unaligned Force User"] },
+  "ashokaSnips": { "name": "Ahsoka Tano (Snips)", "tag": ["Leader", "501st", "Galactic Republic", "Jedi"] },
+  "cat": { "name": "Commander Ahsoka Tano", "tag": ["Scoundrel", "Unaligned Force User", "Galactic Republic"] },
   "ezraBridgerExil": { "name": "Ezra Bridger (Exile)", "tag": ["Rebelle", "Exilé"] },
   "generalKenobi": { "name": "General Kenobi", "tag": ["Jedi", "Général"] },
   "generalSyndulla": { "name": "General Syndulla", "tag": ["Rebelle", "Pilote"] },
   "huyang": { "name": "Huyang", "tag": ["Droïde", "Savoir"] },
-  "jmk": { "name": "Jedi Master Kenobi", "tag": ["Jedi", "Maître"] },
+  "jmk": { "name": "Jedi Master Kenobi", "tag": ["Leader", "Galactic Legend", "Galactic Republic", "Jedi"] },
   "padawanSabine": { "name": "Padawan Sabine Wren", "tag": ["Mandalorien", "Padawan"] },
   "padmeAmidala": { "name": "Padme Amidala", "tag": ["Sénatrice", "Politique"] }
 }
