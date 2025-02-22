@@ -8,5 +8,10 @@
   "huyang": { "name": "Huyang", "tag": ["Spectre", "Droid"] },
   "jmk": { "name": "Jedi Master Kenobi", "tag": ["Leader", "Galactic Legend", "Galactic Republic", "Jedi"] },
   "padawanSabine": { "name": "Padawan Sabine Wren", "tag": ["Spectre", "Mandalorian", "Unaligned Force User"] },
-  "padmeAmidala": { "name": "Padme Amidala", "tag": ["Leader", "Galactic Republic"] }
+  "padmeAmidala": { "name": "Padme Amidala", "tag": ["Leader", "Galactic Republic"] },
+  "cls": { "name": "Commander Luke Skywalker", "tag": ["Leader", "Rebel", "Unaligned Force User"] },
+  "chewbacca": { "name": "Chewbacca", "tag": ["Smuggler", "Rebel", "Scoundrel", "Wookiee"] },
+  "c3po": { "name": "C-3PO", "tag": ["Droid", "Rebel", "Galactic Republic", "Resistance"] },
+  "hansolo": { "name": "Han Solo", "tag": ["Mercenary", "Rebel", "Scoundrel", "Smuggler"] },
+  "threepio": { "name": "Threepio & Chewie", "tag": ["Rebel", "Droid", "Wookiee"] }
 }
