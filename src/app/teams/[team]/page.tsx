@@ -6,6 +6,7 @@ import glatTeam from "@/app/data/teams/glat";
 import clsTeam from "@/app/data/teams/cls";
 import jmlTeam from "@/app/data/teams/jml";
 import revaTeam from "@/app/data/teams/reva";
+import jabbaTeam from "@/app/data/teams/jabba";
 import { TeamTableProps } from "@/app/types/table";
 
 export const teamData: Record<string, TeamTableProps> = {
@@ -14,6 +15,7 @@ export const teamData: Record<string, TeamTableProps> = {
   CLS: clsTeam,
   JML: jmlTeam,
   Reva: revaTeam,
+  Jabba: jabbaTeam,
 };
 
 export const generateStaticParams = () => {

@@ -35,6 +35,11 @@ enum Images {
   c3po = "/c3po.png",
   hansolo = "/hansolo.png",
   threepio = "/threepio.png",
+  jabba = "/jabba.png",
+  boba = "/boba.png",
+  skifflando = "/skifflando.png",
+  boushh = "/boushh.png",
+  krrsantan = "/krrsantan.png",
 }
 
 export default Images;

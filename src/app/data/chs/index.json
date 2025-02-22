@@ -23,5 +23,10 @@
   "gi": { "name": "Grand Inquisitor", "tag": ["Leader", "Empire", "Inquisitorius", "Unaligned Force User"] },
   "cinqfrere": { "name": "Fifth Brother", "tag": ["Leader", "Empire", "Inquisitorius", "Unaligned Force User"] },
   "huitfrere": { "name": "Eighth Brother", "tag": ["Leader", "Empire", "Inquisitorius", "Unaligned Force User"] },
-  "septsoeur": { "name": "Seventh Sister", "tag": ["Leader", "Empire", "Inquisitorius", "Unaligned Force User"] }
+  "septsoeur": { "name": "Seventh Sister", "tag": ["Leader", "Empire", "Inquisitorius", "Unaligned Force User"] },
+  "jabba": { "name": "Jabba the Hutt", "tag": ["Leader", "Galactic Legend", "Bounty Hunter", "Hutt Cartel", "Smuggler"] },
+  "boba": { "name": "Boba Fett", "tag": ["Leader", "Scoundrel", "Bounty Hunter", "Hutt Cartel"] },
+  "boushh": { "name": "Boushh (Leia Organa)", "tag": ["Leader", "Scoundrel", "Bounty Hunter", "Hutt Cartel"] },
+  "krrsantan": { "name": "Krrsantan", "tag": ["Leader", "Scoundrel", "Bounty Hunter", "Hutt Cartel", "Mercenary", "Wookiee"] },
+  "skifflando": { "name": "Skiff Guard (Lando Calrissian)", "tag": ["Scoundrel", "Smuggler", "Hutt Cartel"] }
 }

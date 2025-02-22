@@ -14,5 +14,6 @@ export const teamsCharacters: Record<string, string[]> = {
   GLAT: ["glat", "ezraBridgerExil", "generalSyndulla", "huyang", "padawanSabine"],
   CLS: ["cls", "chewbacca", "c3po", "hansolo", "threepio"],
   JML: ["jml", "jkl", "revan", "jkck", "hyoda"],
-  Reva: ["reva", "gi", "cinqfrere", "huitfrere", "septsoeur"]
+  Reva: ["reva", "gi", "cinqfrere", "huitfrere", "septsoeur"],
+  Jabba: ["jabba", "boushh", "skifflando", "krrsantan", "boba"]
 };
