@@ -2,34 +2,34 @@ import Images from "@/app/assets/images";
 import { TeamTableProps } from "@/app/types/table";
 import { ChsName, SetsName } from "..";
 
-const clsTeam: TeamTableProps = {
-  teamName: "CLS",
+const glatTeam: TeamTableProps = {
+  teamName: "GLAT",
   data: {
     characters: [
       {
-        name: ChsName.cls.name,
-        image: Images.cls,
-        relic: "",
+        name: ChsName.glat.name,
+        image: Images.glat,
+        relic: "Rel 9",
       },
       {
-        name: ChsName.chewbacca.name,
-        image: Images.chewbacca,
-        relic: "",
+        name: ChsName.generalSyndulla.name,
+        image: Images.generalsyndu,
+        relic: "Rel 7 / 8",
       },
       {
-        name: ChsName.c3po.name,
-        image: Images.c3po,
-        relic: "",
+        name: ChsName.huyang.name,
+        image: Images.huyang,
+        relic: "Rel 7 / 8",
       },
       {
-        name: ChsName.hansolo.name,
-        image: Images.hansolo,
-        relic: "",
+        name: ChsName.padawanSabine.name,
+        image: Images.padawansabine,
+        relic: "Rel 7 / 8",
       },
       {
-        name: ChsName.threepio.name,
-        image: Images.threepio,
-        relic: "",
+        name: ChsName.ezraBridgerExil.name,
+        image: Images.ezraexile,
+        relic: "Rel 8 / 9",
       },
     ],
     sets: [
@@ -108,4 +108,4 @@ const clsTeam: TeamTableProps = {
   },
 };
 
-export default clsTeam;
+export default glatTeam;

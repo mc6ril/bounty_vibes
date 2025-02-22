@@ -1,34 +1,34 @@
-import Images from "@/app/assets/images";
 import { TeamTableProps } from "@/app/types/table";
 import { ChsName, SetsName } from "..";
+import Images from "../../assets/images";
 
-const clsTeam: TeamTableProps = {
-  teamName: "CLS",
+const jmlTeam: TeamTableProps = {
+  teamName: "JML",
   data: {
     characters: [
       {
-        name: ChsName.cls.name,
-        image: Images.cls,
+        name: ChsName.jml.name,
+        image: Images.jml,
+        relic: "Rel 9",
+      },
+      {
+        name: ChsName.jkl.name,
+        image: Images.jkl,
         relic: "",
       },
       {
-        name: ChsName.chewbacca.name,
-        image: Images.chewbacca,
+        name: ChsName.revan.name,
+        image: Images.revan,
         relic: "",
       },
       {
-        name: ChsName.c3po.name,
-        image: Images.c3po,
+        name: ChsName.jkck.name,
+        image: Images.jkck,
         relic: "",
       },
       {
-        name: ChsName.hansolo.name,
-        image: Images.hansolo,
-        relic: "",
-      },
-      {
-        name: ChsName.threepio.name,
-        image: Images.threepio,
+        name: ChsName.hyoda.name,
+        image: Images.hyoda,
         relic: "",
       },
     ],
@@ -108,4 +108,4 @@ const clsTeam: TeamTableProps = {
   },
 };
 
-export default clsTeam;
+export default jmlTeam;

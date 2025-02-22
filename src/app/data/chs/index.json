@@ -13,5 +13,15 @@
   "chewbacca": { "name": "Chewbacca", "tag": ["Smuggler", "Rebel", "Scoundrel", "Wookiee"] },
   "c3po": { "name": "C-3PO", "tag": ["Droid", "Rebel", "Galactic Republic", "Resistance"] },
   "hansolo": { "name": "Han Solo", "tag": ["Mercenary", "Rebel", "Scoundrel", "Smuggler"] },
-  "threepio": { "name": "Threepio & Chewie", "tag": ["Rebel", "Droid", "Wookiee"] }
+  "threepio": { "name": "Threepio & Chewie", "tag": ["Rebel", "Droid", "Wookiee"] },
+  "jml": { "name": "Jedi Master Luke Skywalker", "tag": ["Galactic Legend", "Leader", "Jedi"] },
+  "jkl": { "name": "Jedi Knight Luke Skywalker", "tag": ["Leader", "Jedi"] },
+  "revan": { "name": "Jedi Knight Revan", "tag": ["Old Republic", "Leader", "Jedi"] },
+  "jkck": { "name": "Jedi Knight Cal Kestis", "tag": ["Mercenary", "Leader", "Jedi"] },
+  "hyoda": { "name": "Hermit Yoda", "tag": ["Jedi"] },
+  "reva": { "name": "Third Sister", "tag": ["Leader", "Empire", "Inquisitorius", "Unaligned Force User"] },
+  "gi": { "name": "Grand Inquisitor", "tag": ["Leader", "Empire", "Inquisitorius", "Unaligned Force User"] },
+  "cinqfrere": { "name": "Fifth Brother", "tag": ["Leader", "Empire", "Inquisitorius", "Unaligned Force User"] },
+  "huitfrere": { "name": "Eighth Brother", "tag": ["Leader", "Empire", "Inquisitorius", "Unaligned Force User"] },
+  "septsoeur": { "name": "Seventh Sister", "tag": ["Leader", "Empire", "Inquisitorius", "Unaligned Force User"] }
 }

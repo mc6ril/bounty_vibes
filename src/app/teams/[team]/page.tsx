@@ -4,12 +4,16 @@ import { teamsArray } from "@/app/data";
 import jmkTeam from "@/app/data/teams/jmk";
 import glatTeam from "@/app/data/teams/glat";
 import clsTeam from "@/app/data/teams/cls";
+import jmlTeam from "@/app/data/teams/jml";
+import revaTeam from "@/app/data/teams/reva";
 import { TeamTableProps } from "@/app/types/table";
 
 export const teamData: Record<string, TeamTableProps> = {
   JMK: jmkTeam,
   GLAT: glatTeam,
   CLS: clsTeam,
+  JML: jmlTeam,
+  Reva: revaTeam,
 };
 
 export const generateStaticParams = () => {

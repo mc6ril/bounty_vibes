@@ -12,5 +12,7 @@ export const teamsArray: string[] = [...Object.values(TeamsName)];
 export const teamsCharacters: Record<string, string[]> = {
   JMK: ["jmk", "cat", "ashokaSnips", "padmeAmidala", "generalKenobi"],
   GLAT: ["glat", "ezraBridgerExil", "generalSyndulla", "huyang", "padawanSabine"],
-  CLS: ["cls", "chewbacca", "c3po", "hansolo", "threepio"]
+  CLS: ["cls", "chewbacca", "c3po", "hansolo", "threepio"],
+  JML: ["jml", "jkl", "revan", "jkck", "hyoda"],
+  Reva: ["reva", "gi", "cinqfrere", "huitfrere", "septsoeur"]
 };
