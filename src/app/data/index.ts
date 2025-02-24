@@ -1,9 +1,10 @@
-import chs from "@/data/chs/index.json";
-import sets from "@/data/sets/index.json";
-import teams from "@/data/chs/teamName.json";
+import { characters } from "./chs";
+import { sets } from "./sets";
+import { teams } from "./teamNames";
 
-export type ChsNameKey = keyof typeof chs;
-export const ChsName: Record<ChsNameKey, { name: string; tag: string[] }> = chs;
+export type ChsNameKey = keyof typeof characters;
+export const ChsName: Record<ChsNameKey, { name: string; tag: string[] }> = characters;
+
 export type SetKeyName = keyof typeof sets;
 export const SetsName: Record<SetKeyName, string> = sets;
 
@@ -20,7 +21,7 @@ export const teamsCharacters: Record<TeamNameKey, ChsNameKey[]> = {
   reva: ["reva", "gi", "cinqfrere", "huitfrere", "septsoeur"],
   jabba: ["jabba", "boushh", "skifflando", "krrsantan", "boba"],
   aphra: ["aphra", "ooo", "bt1", "ig88", "sonde"],
-  leaiaGL: [],
+  leiaGL: [],
   lv: [],
   rey: [],
   sk: [],

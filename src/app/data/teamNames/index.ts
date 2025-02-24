@@ -1,0 +1,15 @@
+export const teams = {
+  aphra: "Aphra",
+  cls: "CLS",
+  glat: "GLAT",
+  jabba: "Jabba",
+  jmk: "JMK",
+  jml: "JML",
+  leiaGL: "Leia",
+  lv: "LV",
+  reva: "Reva",
+  rey: "Rey",
+  sk: "SK",
+  slkr: "SLKR",
+  ufu: "UFU",
+};
