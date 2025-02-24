@@ -1,14 +1,15 @@
 {
-  "jmk": "JMK",
-  "cls": "CLS",
-  "reva": "Reva",
   "aphra": "Aphra",
-  "leaiaGL": "Leia",
+  "cls": "CLS",
   "glat": "GLAT",
-  "JML": "JML",
+  "jabba": "Jabba",
+  "jmk": "JMK",
+  "jml": "JML",
+  "leaiaGL": "Leia",
   "lv": "LV",
+  "reva": "Reva",
   "rey": "Rey",
   "sk": "SK",
-  "ufu": "UFU",
-  "slkr": "SLKR"
+  "slkr": "SLKR",
+  "ufu": "UFU"
 }

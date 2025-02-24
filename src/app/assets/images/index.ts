@@ -31,6 +31,20 @@ enum Images {
   revan = "/revan.png",
   septsoeur = "/septsoeur.png",
   snips = "/snips.png",
+  chewbacca = "/chewbacca.png",
+  c3po = "/c3po.png",
+  hansolo = "/hansolo.png",
+  threepio = "/threepio.png",
+  jabba = "/jabba.png",
+  boba = "/boba.png",
+  skifflando = "/skifflando.png",
+  boushh = "/boushh.png",
+  krrsantan = "/krrsantan.png",
+  aphra = "/aphra.png",
+  ooo = "/0-0-0.png",
+  bt1 = "/bt-1.png",
+  ig88 = "/ig88.png",
+  sonde = "/sonde.png",
 }
 
 export default Images;

@@ -2,33 +2,33 @@ import { TeamTableProps } from "@/app/types/table";
 import { ChsName, SetsName } from "..";
 import Images from "../../assets/images";
 
-const jmkTeam: TeamTableProps = {
-  teamName: "JMK",
+const jabbaTeam: TeamTableProps = {
+  teamName: "Jabba",
   data: {
     characters: [
       {
-        name: ChsName.jmk.name,
-        image: Images.jmk,
+        name: ChsName.jabba.name,
+        image: Images.jabba,
         relic: "Rel 7",
       },
       {
-        name: ChsName.cat.name,
-        image: Images.cat,
+        name: ChsName.boushh.name,
+        image: Images.boushh,
         relic: "Rel 5 / 7",
       },
       {
-        name: ChsName.ashokaSnips.name,
-        image: Images.snips,
+        name: ChsName.boba.name,
+        image: Images.boba,
         relic: "Rel 5 / 7",
       },
       {
-        name: ChsName.padmeAmidala.name,
-        image: Images.padme,
+        name: ChsName.skifflando.name,
+        image: Images.skifflando,
         relic: "Rel 7",
       },
       {
-        name: ChsName.generalKenobi.name,
-        image: Images.gk,
+        name: ChsName.krrsantan.name,
+        image: Images.krrsantan,
         relic: "Rel 8 / 9",
       },
     ],
@@ -100,4 +100,4 @@ const jmkTeam: TeamTableProps = {
   },
 };
 
-export default jmkTeam;
+export default jabbaTeam;
