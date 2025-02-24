@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import "./page.css";
-import { teamsArray, teamsCharacters, ChsName } from "../data/index";
+import { teamsArray, teamsCharacters, ChsName } from "@/data";
 import Link from "next/link";
 
 export default function Page() {
@@ -17,13 +17,13 @@ export default function Page() {
     const matchTeamName = team.toLowerCase().includes(search.toLowerCase());
 
     // Vérifier si un des personnages associés a un nom qui correspond
-    const matchCharacterName = characterKeys.some(
-      (charKey) => ChsName[charKey]?.name.toLowerCase().includes(search.toLowerCase())
+    const matchCharacterName = characterKeys.some((charKey) =>
+      ChsName[charKey]?.name.toLowerCase().includes(search.toLowerCase()),
     );
 
     // Vérifier si un des personnages a un tag qui correspond
-    const matchCharacterTag = characterKeys.some(
-      (charKey) => ChsName[charKey]?.tag.some((tag) => tag.toLowerCase().includes(search.toLowerCase()))
+    const matchCharacterTag = characterKeys.some((charKey) =>
+      ChsName[charKey]?.tag.some((tag) => tag.toLowerCase().includes(search.toLowerCase())),
     );
 
     // Retourner vrai si au moins une des conditions est remplie
@@ -43,11 +43,18 @@ export default function Page() {
         className="search-input"
       />
       <div className="grid">
-        {filteredTeams.map((team) => (
-          <Link key={team} className="card" href={`/teams/${team}`}>
-            {team}
-          </Link>
-        ))}
+        {filteredTeams.length > 0 ? (
+          filteredTeams.map((team) => (
+            <Link
+              key={team}
+              className="card"
+              href={`/teams/${team}`}>
+              {team}
+            </Link>
+          ))
+        ) : (
+          <p className="no-results">No teams found</p>
+        )}
       </div>
     </div>
   );

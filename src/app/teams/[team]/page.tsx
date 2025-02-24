@@ -1,23 +1,23 @@
-import TeamModsTable from "@/app/components/teamTable/table";
+import TeamModsTable from "@/components/teamTable/table";
 import { notFound } from "next/navigation";
-import { teamsArray } from "@/app/data";
-import aphraTeam from "@/app/data/teams/aphra";
-import clsTeam from "@/app/data/teams/cls";
-import glatTeam from "@/app/data/teams/glat";
-import jabbaTeam from "@/app/data/teams/jabba";
-import jmkTeam from "@/app/data/teams/jmk";
-import jmlTeam from "@/app/data/teams/jml";
-import revaTeam from "@/app/data/teams/reva";
-import { TeamTableProps } from "@/app/types/table";
+import { TeamNameKey, teamsArray } from "@/data";
+import aphraTeam from "@/data/teams/aphra";
+import clsTeam from "@/data/teams/cls";
+import glatTeam from "@/data/teams/glat";
+import jabbaTeam from "@/data/teams/jabba";
+import jmkTeam from "@/data/teams/jmk";
+import jmlTeam from "@/data/teams/jml";
+import revaTeam from "@/data/teams/reva";
+import { TeamTableProps } from "@/types/table";
 
-export const teamData: Record<string, TeamTableProps> = {
-  JMK: jmkTeam,
-  GLAT: glatTeam,
-  CLS: clsTeam,
-  JML: jmlTeam,
-  Reva: revaTeam,
-  Jabba: jabbaTeam,
-  Aphra: aphraTeam,
+export const teamData: Partial<Record<TeamNameKey, TeamTableProps>> = {
+  jmk: jmkTeam,
+  glat: glatTeam,
+  cls: clsTeam,
+  jml: jmlTeam,
+  reva: revaTeam,
+  jabba: jabbaTeam,
+  aphra: aphraTeam,
 };
 
 export const generateStaticParams = () => {
@@ -25,7 +25,7 @@ export const generateStaticParams = () => {
   return teams.map((team) => ({ team }));
 };
 
-const TeamPage = async (props: { params: Promise<{ team: string }> }) => {
+const TeamPage = async (props: { params: Promise<{ team: TeamNameKey }> }) => {
   const { params } = props;
   const { team } = await params;
 

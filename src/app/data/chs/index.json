@@ -24,10 +24,16 @@
   "cinqfrere": { "name": "Fifth Brother", "tag": ["Leader", "Empire", "Inquisitorius", "Unaligned Force User"] },
   "huitfrere": { "name": "Eighth Brother", "tag": ["Leader", "Empire", "Inquisitorius", "Unaligned Force User"] },
   "septsoeur": { "name": "Seventh Sister", "tag": ["Leader", "Empire", "Inquisitorius", "Unaligned Force User"] },
-  "jabba": { "name": "Jabba the Hutt", "tag": ["Leader", "Galactic Legend", "Bounty Hunter", "Hutt Cartel", "Smuggler"] },
+  "jabba": {
+    "name": "Jabba the Hutt",
+    "tag": ["Leader", "Galactic Legend", "Bounty Hunter", "Hutt Cartel", "Smuggler"]
+  },
   "boba": { "name": "Boba Fett", "tag": ["Leader", "Scoundrel", "Bounty Hunter", "Hutt Cartel"] },
   "boushh": { "name": "Boushh (Leia Organa)", "tag": ["Leader", "Scoundrel", "Bounty Hunter", "Hutt Cartel"] },
-  "krrsantan": { "name": "Krrsantan", "tag": ["Leader", "Scoundrel", "Bounty Hunter", "Hutt Cartel", "Mercenary", "Wookiee"] },
+  "krrsantan": {
+    "name": "Krrsantan",
+    "tag": ["Leader", "Scoundrel", "Bounty Hunter", "Hutt Cartel", "Mercenary", "Wookiee"]
+  },
   "skifflando": { "name": "Skiff Guard (Lando Calrissian)", "tag": ["Scoundrel", "Smuggler", "Hutt Cartel"] },
   "aphra": { "name": "Doctor Aphra", "tag": ["Leader", "Mercenary", "Scoundrel"] },
   "ooo": { "name": "0-0-0", "tag": ["Droid", "Scoundrel"] },

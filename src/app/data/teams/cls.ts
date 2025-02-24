@@ -1,5 +1,5 @@
-import Images from "@/app/assets/images";
-import { TeamTableProps } from "@/app/types/table";
+import Images from "@/assets/images";
+import { TeamTableProps } from "@/types/table";
 import { ChsName, SetsName } from "..";
 
 const clsTeam: TeamTableProps = {

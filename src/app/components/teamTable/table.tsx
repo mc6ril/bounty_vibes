@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import "@/app/components/teamTable/table.css";
-import { TeamTableProps } from "@/app/types/table";
+import "@/components/teamTable/table.css";
+import { TeamTableProps } from "@/types/table";
 
 const TeamModsTable: React.FC<TeamTableProps> = ({ teamName, data }) => {
   return (
