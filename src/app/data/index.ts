@@ -2,7 +2,7 @@ import chs from "./chs/index.json";
 import sets from "./sets/index.json";
 import teams from "./chs/teamName.json";
 
-export const ChsName: Record<string, { name: string; tag: string[] }> = chs;
+export const ChsName: Record<keyof typeof chs, { name: string; tag: string[] }> = chs;
 export const SetsName: Record<keyof typeof sets, string> = sets;
 
 const TeamsName: Record<keyof typeof teams, string> = teams;
@@ -16,5 +16,5 @@ export const teamsCharacters: Record<string, string[]> = {
   JML: ["jml", "jkl", "revan", "jkck", "hyoda"],
   Reva: ["reva", "gi", "cinqfrere", "huitfrere", "septsoeur"],
   Jabba: ["jabba", "boushh", "skifflando", "krrsantan", "boba"],
-  Aphra: ["aphra", "ooo", "bt1", "ig88", "sonde"]
+  Aphra: ["aphra", "ooo", "bt1", "ig88", "sonde"],
 };
