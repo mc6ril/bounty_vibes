@@ -1,6 +1,6 @@
-import { TeamTableProps } from "@/app/types/table";
+import { TeamTableProps } from "@/types/table";
 import { ChsName, SetsName } from "..";
-import Images from "../../assets/images";
+import Images from "@/assets/images";
 
 const jmkTeam: TeamTableProps = {
   teamName: "JMK",

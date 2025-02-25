@@ -1,104 +1,104 @@
 /* Conteneur principal */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-    background-color: black;
-    padding-top: 120px; /* Espace sous l’en-tête */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  background-color: black;
+  padding-top: 120px; /* Espace sous l’en-tête */
 }
 
 /* En-tête */
 .header {
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: black;
-    color: #FFD700;
-    text-transform: uppercase;
-    font-size: 24px;
-    letter-spacing: 3px;
-    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
-    z-index: 100;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  color: #ffd700;
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 3px;
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+  z-index: 100;
 }
 
 /* Titre */
 h1 {
-    margin: 0;
-    font-size: 28px;
-    color: #FFD700;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+  margin: 0;
+  font-size: 28px;
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
 }
 
 /* Conteneur du champ de recherche */
 .search-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 20px; /* Ajusté pour éviter qu'il soit masqué */
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px; /* Ajusté pour éviter qu'il soit masqué */
+  margin-bottom: 20px;
 }
 
 /* Champ de recherche */
 .search-input {
-    width: 50%;
-    padding: 15px;
-    font-size: 18px;
-    border: 2px solid #FFD700;
-    background: black;
-    color: #FFD700;
-    border-radius: 8px;
-    outline: none;
-    transition: all 0.3s ease-in-out;
-    text-align: center;
+  width: 50%;
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid #ffd700;
+  background: black;
+  color: #ffd700;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
 }
 
 .search-input:focus {
-    border-color: #ff0000;
-    box-shadow: 0 0 10px #ff0000;
+  border-color: #ff0000;
+  box-shadow: 0 0 10px #ff0000;
 }
 
 /* Grille */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: 120px;
-    gap: 25px;
-    width: 100%; /* Empêcher le rétrécissement */
-    max-width: 800px; /* Ajustez selon votre mise en page */
-    margin-top: 40px;
-    justify-content: center;
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 120px;
+  gap: 25px;
+  width: 100%; /* Empêcher le rétrécissement */
+  max-width: 800px; /* Ajustez selon votre mise en page */
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Cartes */
 .card {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #FFD700;
-    width: 120px; /* Taille fixe */
-    height: 120px; /* Taille fixe */
-    padding: 20px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out, background-color 0.3s, box-shadow 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #FFD700;
-    text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
-    box-shadow: 0 0 5px #FFD700;
-    flex-shrink: 0; /* Empêche le rétrécissement */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffd700;
+  width: 120px; /* Taille fixe */
+  height: 120px; /* Taille fixe */
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.3s, box-shadow 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ffd700;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
+  box-shadow: 0 0 5px #ffd700;
+  flex-shrink: 0; /* Empêche le rétrécissement */
 }
 
 /* Effet au survol */
 .card:hover {
-    box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
-    transform: scale(1.1);
+  box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
+  transform: scale(1.1);
 }
