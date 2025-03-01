@@ -139,4 +139,24 @@ export const characters = {
     name: "Imperial Probe Droid",
     tag: ["Empire", "Droid"],
   },
+  lordvador: {
+    name: "Lord Vader",
+    tag: ["Leader", "Galactic Legend", "Empire", "Sith"],
+  },
+  piett: {
+    name: "Admiral Piett",
+    tag: ["Leader", "Imperial Trooper", "Empire", "Fleet Commander"],
+  },
+  maul: {
+    name: "Maul",
+    tag: ["Leader", "Mandalorian", "Unaligned Force User"],
+  },
+  royalguard: {
+    name: "Royal Guard",
+    tag: ["Empire"],
+  },
+  admiralthrawn: {
+    name: "Grand Admiral Thrawn",
+    tag: ["Leader", "Empire", "Fleet Commander"],
+  },
 };

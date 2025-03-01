@@ -3,32 +3,32 @@ import { TeamTableProps } from "@/types/table";
 import { ChsName, SetsName } from "..";
 
 const glatTeam: TeamTableProps = {
-  teamName: "GLAT",
+  teamName: "LV",
   data: {
     characters: [
       {
-        name: ChsName.glat.name,
-        image: Images.glat,
+        name: ChsName.lordvador.name,
+        image: Images.lordvador,
         relic: "Rel 9",
       },
       {
-        name: ChsName.generalSyndulla.name,
-        image: Images.generalsyndu,
+        name: ChsName.maul.name,
+        image: Images.maul,
         relic: "Rel 7 / 8",
       },
       {
-        name: ChsName.huyang.name,
-        image: Images.huyang,
+        name: ChsName.royalguard.name,
+        image: Images.royalguard,
         relic: "Rel 7 / 8",
       },
       {
-        name: ChsName.padawanSabine.name,
-        image: Images.padawansabine,
+        name: ChsName.admiralthrawn.name,
+        image: Images.admiralthrawn,
         relic: "Rel 7 / 8",
       },
       {
-        name: ChsName.ezraBridgerExil.name,
-        image: Images.ezraexile,
+        name: ChsName.piett.name,
+        image: Images.piett,
         relic: "Rel 8 / 9",
       },
     ],
