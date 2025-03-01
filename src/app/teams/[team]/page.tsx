@@ -8,6 +8,8 @@ import jabbaTeam from "@/data/teams/jabba";
 import jmkTeam from "@/data/teams/jmk";
 import jmlTeam from "@/data/teams/jml";
 import revaTeam from "@/data/teams/reva";
+import lvTeam from "@/data/teams/lv";
+import leiaGLTeam from "@/data/teams/leiaGL";
 import { TeamTableProps } from "@/types/table";
 
 export const teamData: Partial<Record<TeamNameKey, TeamTableProps>> = {
@@ -18,6 +20,8 @@ export const teamData: Partial<Record<TeamNameKey, TeamTableProps>> = {
   reva: revaTeam,
   jabba: jabbaTeam,
   aphra: aphraTeam,
+  lv: lvTeam,
+  leiaGL: leiaGLTeam,
 };
 
 export const generateStaticParams = () => {

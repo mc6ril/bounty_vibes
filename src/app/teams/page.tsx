@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import "./page.css";
 import Link from "next/link";
 import { ChsName, TeamNameKey, teamsArray, teamsCharacters } from "@/data";
+import { teams } from "@/data/teamNames";
 
 export default function Page() {
   const [search, setSearch] = useState("");
@@ -46,7 +47,7 @@ export default function Page() {
               key={team}
               className="card"
               href={`/teams/${team}`}>
-              {team}
+              {teams[team] || team}
             </Link>
           ))
         ) : (

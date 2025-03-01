@@ -159,4 +159,16 @@ export const characters = {
     name: "Grand Admiral Thrawn",
     tag: ["Leader", "Empire", "Fleet Commander"],
   },
+  leiagl: {
+    name: "Leia Organa",
+    tag: ["Galactic Legend", "Leader", "Rebel"],
+  },
+  r2d2: {
+    name: "R2-D2",
+    tag: ["Galactic Republic", "Droid", "Rebel", "Resistance", "Battle for Naboo"],
+  },
+  drogan: {
+    name: "Captain Drogan",
+    tag: ["Rebel", "Rebel Fighter"],
+  },
 };

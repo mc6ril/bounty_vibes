@@ -2,7 +2,7 @@ import Images from "@/assets/images";
 import { TeamTableProps } from "@/types/table";
 import { ChsName, SetsName } from "..";
 
-const glatTeam: TeamTableProps = {
+const lvTeam: TeamTableProps = {
   teamName: "LV",
   data: {
     characters: [
@@ -108,4 +108,4 @@ const glatTeam: TeamTableProps = {
   },
 };
 
-export default glatTeam;
+export default lvTeam;
