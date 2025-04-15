@@ -1,182 +1,73 @@
-# 📖 Guide Git & Next.js
+# Bounty Vibes
 
-Bienvenue dans ce guide qui va t’aider à utiliser **Git** et **GitHub** pour collaborer efficacement sur notre projet. 🚀  
-Nous allons voir comment :
+Bounty Vibes est une application web dédiée à Star Wars: Galaxy of Heroes qui permet aux joueurs de découvrir et d'explorer les meilleures compositions d'équipes pour le jeu.
 
--   ✅ Créer une branche pour travailler dessus
--   ✅ Envoyer ton code sur GitHub
--   ✅ Récupérer le code mis à jour depuis GitHub
--   ✅ Faire une **Pull Request (PR)** pour proposer tes modifications
--   ✅ Utiliser **Yarn** pour lancer et builder le projet Next.js
+## Fonctionnalités
 
----
+- 🔍 Recherche d'équipes par nom
+- 🚀 Accès rapide aux équipes populaires
+- 📊 Affichage détaillé des statistiques et mods pour chaque équipe
+- 🎯 Recommandations de composition d'équipe optimisées
 
-## 🔹 1. Cloner le projet (première fois seulement)
+## Structure du Projet
 
-Avant de commencer, il faut récupérer le projet depuis GitHub :
+Le projet suit une architecture propre (Clean Architecture) avec une séparation claire des responsabilités :
 
-```bash
-git clone https://github.com/nom-utilisateur/nom-du-repo.git
-cd nom-du-repo
+```
+src/
+├── app/                    # Application Next.js (couche présentation)
+├── core/                   # Logique métier et domaines
+├── data/                   # Données et sources de données
+└── presentation/           # Composants UI et styles
 ```
 
-Cela crée un dossier avec tout le code du projet.
+## Installation
 
----
-
-## 🔹 2. Créer une nouvelle branche
-
-Avant de travailler, crée ta propre branche pour éviter de modifier directement `main` :
+1. Cloner le repository :
 
 ```bash
-git checkout -b ma-branche
+git clone https://github.com/votre-username/bounty_vibes.git
 ```
 
-💡 Remplace `ma-branche` par un nom explicite (ex: `feature-login`, `fix-bug-header`, etc.).
-
----
-
-## 🔹 3. Faire des modifications et envoyer le code sur GitHub
-
-Après avoir modifié du code, voici comment l’envoyer sur GitHub :
-
-1. Vérifier quels fichiers ont changé :
-
-    ```bash
-    git status
-    ```
-
-2. Ajouter les fichiers à la prochaine sauvegarde :
-
-    ```bash
-    git add .
-    ```
-
-3. Créer un "commit" (une sauvegarde avec un message explicatif) :
-
-    ```bash
-    git commit -m "Ajout du formulaire de connexion"
-    ```
-
-4. Envoyer la branche sur GitHub :
-
-    ```bash
-    git push origin ma-branche
-    ```
-
-💡 Si c'est ta première fois sur cette branche, utilise :
+2. Installer les dépendances :
 
 ```bash
-git push --set-upstream origin ma-branche
+cd bounty_vibes
+npm install
 ```
 
----
-
-## 🔹 4. Récupérer les dernières mises à jour du projet
-
-Avant de commencer à coder ou après une PR validée, il faut récupérer les mises à jour du projet :
-
-1. Revenir sur `main` :
-
-    ```bash
-    git checkout main
-    ```
-
-2. Télécharger les dernières mises à jour :
-
-    ```bash
-    git pull origin main
-    ```
-
-3. Mettre à jour ta branche avec les nouvelles modifications :
-
-    ```bash
-    git checkout ma-branche
-    git merge main
-    ```
-
-💡 **Conflits ?** Si Git indique des conflits, il faut les résoudre manuellement dans les fichiers concernés avant de valider avec :
+3. Lancer l'application en mode développement :
 
 ```bash
-git add .
-git commit -m "Résolution des conflits"
-git push origin ma-branche
+npm run dev
 ```
 
----
+## Ajout d'une Nouvelle Équipe
 
-## 🔹 5. Faire une **Pull Request (PR)** sur GitHub
+Pour ajouter une nouvelle équipe, suivez ces étapes :
 
-Une **Pull Request** permet de proposer ton code pour qu’il soit intégré au projet.
+1. Créer un nouveau fichier dans `src/data/teamNames/` (ex: `newTeam.ts`)
+2. Implémenter la structure de données selon le modèle existant
+3. Ajouter l'équipe dans `AVAILABLE_TEAMS` dans `src/app/teams/page.tsx`
+4. Ajouter l'équipe dans `generateStaticParams` dans `src/app/teams/[teamName]/page.tsx`
 
-1. Aller sur GitHub :  
-   👉 [https://github.com/nom-utilisateur/nom-du-repo/pulls](https://github.com/nom-utilisateur/nom-du-repo/pulls)
+## Technologies Utilisées
 
-2. **Créer une nouvelle PR** :
+- Next.js 15
+- TypeScript
+- CSS Modules
+- Clean Architecture
 
-    - Sélectionne ta branche (`ma-branche`)
-    - Vérifie les fichiers modifiés
-    - Ajoute un **titre clair** et une **description**
-    - Clique sur **"Create Pull Request"**
+## Contribution
 
-3. Après validation, fusionner la PR en cliquant sur **"Merge Pull Request"**
+Les contributions sont les bienvenues ! N'hésitez pas à :
 
-4. Supprimer ta branche localement (optionnel) :
+1. Fork le projet
+2. Créer une branche pour votre fonctionnalité
+3. Commiter vos changements
+4. Pousser vers la branche
+5. Ouvrir une Pull Request
 
-    ```bash
-    git branch -d ma-branche
-    git push origin --delete ma-branche
-    ```
+## Licence
 
----
-
-## 🔹 6. Utiliser **Yarn** avec Next.js
-
-Dans notre projet, on utilise **Yarn** pour gérer les dépendances et lancer l’application.
-
-### 🚀 Installer les dépendances
-
-Si c'est ta première fois sur le projet :
-
-```bash
-yarn install
-```
-
-### ▶️ Lancer le projet en local
-
-```bash
-yarn dev
-```
-
-💡 Cela démarre un serveur local pour voir tes modifications en direct.
-
-### 🔨 Builder le projet
-
-Si tu veux générer la version prête pour la production :
-
-```bash
-yarn build
-```
-
-### 🔄 Mettre à jour les dépendances
-
-Si une mise à jour des dépendances est nécessaire :
-
-```bash
-yarn upgrade
-```
-
-### 📂 Mettre à jour le dossier `/out`
-
-Si le projet utilise un export statique, voici comment régénérer `/out` :
-
-```bash
-yarn build
-```
-
----
-
-## 🎯 Conclusion
-
-Tu as maintenant toutes les bases pour travailler efficacement avec **Git**, **GitHub** et **Next.js** !  
-Si tu as des questions, n’hésite pas à me demander. 🚀
+MIT

@@ -5,7 +5,10 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import styles from "./page.module.css";
 
-const AVAILABLE_TEAMS = ["jmk", "glat"];
+const AVAILABLE_TEAMS = [
+  { id: "jmk", name: "JMK Team" },
+  { id: "glat", name: "GLAT Team" },
+];
 
 export default function TeamsPage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -13,10 +16,20 @@ export default function TeamsPage() {
 
   const handleSearch = () => {
     const normalizedSearch = searchTerm.toLowerCase().trim();
-    if (AVAILABLE_TEAMS.includes(normalizedSearch)) {
-      router.push(`/teams/${normalizedSearch}`);
+    const matchingTeam = AVAILABLE_TEAMS.find(
+      (team) => team.id.includes(normalizedSearch) || team.name.toLowerCase().includes(normalizedSearch),
+    );
+
+    if (matchingTeam) {
+      router.push(`/teams/${matchingTeam.id}`);
     }
   };
+
+  const filteredTeams = AVAILABLE_TEAMS.filter(
+    (team) =>
+      team.id.includes(searchTerm.toLowerCase().trim()) ||
+      team.name.toLowerCase().includes(searchTerm.toLowerCase().trim()),
+  );
 
   return (
     <div className={styles.container}>
@@ -42,16 +55,15 @@ export default function TeamsPage() {
       <div className={styles.quickAccess}>
         <h2>Quick Access</h2>
         <div className={styles.teamButtons}>
-          <Link
-            href="/teams/jmk"
-            className={styles.teamButton}>
-            JMK Team
-          </Link>
-          <Link
-            href="/teams/glat"
-            className={styles.teamButton}>
-            GLAT Team
-          </Link>
+          {filteredTeams.map((team) => (
+            <Link
+              key={team.id}
+              href={`/teams/${team.id}`}
+              className={styles.teamButton}>
+              {team.name}
+            </Link>
+          ))}
+          {filteredTeams.length === 0 && <p className={styles.noResults}>No teams found matching your search</p>}
         </div>
       </div>
     </div>
