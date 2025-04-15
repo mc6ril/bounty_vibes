@@ -1,57 +1,35 @@
 "use client";
 
-import React, { useState } from "react";
-import "./page.css";
+import { useState } from "react";
 import Link from "next/link";
-import { ChsName, TeamNameKey, teamsArray, teamsCharacters } from "@/data";
+import styles from "./page.module.css";
 
-export default function Page() {
-  const [search, setSearch] = useState("");
-
-  // Fonction pour filtrer les équipes
-  const filteredTeams = teamsArray.filter((team: TeamNameKey) => {
-    const characterKeys = teamsCharacters[team] || [];
-
-    // Vérifier si le nom de l'équipe correspond
-    const matchTeamName = team.toLowerCase().includes(search.toLowerCase());
-
-    const matchCharacterName = characterKeys.some((charKey) =>
-      ChsName[charKey]?.name.toLowerCase().includes(search.toLowerCase()),
-    );
-
-    // Vérifier si un des personnages a un tag qui correspond
-    const matchCharacterTag = characterKeys.some((charKey) =>
-      ChsName[charKey]?.tag.some((tag) => tag.toLowerCase().includes(search.toLowerCase())),
-    );
-
-    return matchTeamName || matchCharacterName || matchCharacterTag;
-  });
+export default function TeamsPage() {
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
-    <div className="container">
-      <header className="header">
-        <h1>List of teams</h1>
-      </header>
-      <input
-        type="text"
-        placeholder="Find a team..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        className="search-input"
-      />
-      <div className="grid">
-        {filteredTeams.length > 0 ? (
-          filteredTeams.map((team) => (
-            <Link
-              key={team}
-              className="card"
-              href={`/teams/${team}`}>
-              {team}
-            </Link>
-          ))
-        ) : (
-          <p className="no-results">No teams found</p>
-        )}
+    <div className={styles.container}>
+      <div className={styles.searchSection}>
+        <h1>Team Search</h1>
+        <div className={styles.searchContainer}>
+          <input
+            type="text"
+            placeholder="Search for a team..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className={styles.searchInput}
+          />
+          <button className={styles.searchButton}>Search</button>
+        </div>
+      </div>
+
+      <div className={styles.quickAccess}>
+        <h2>Quick Access</h2>
+        <Link
+          href="/teams/glat"
+          className={styles.teamButton}>
+          GLAT Team
+        </Link>
       </div>
     </div>
   );

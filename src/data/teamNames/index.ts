@@ -1,0 +1,15 @@
+export const teams: Record<string, string[]> = {
+  jmk: ["jmk", "cat", "ashokaSnips", "padmeAmidala", "generalKenobi"],
+  glat: ["glat", "ezraBridgerExil", "generalSyndulla", "huyang", "padawanSabine"],
+  cls: ["cls", "chewbacca", "c3po", "hansolo", "threepio"],
+  jml: ["jml", "jkl", "revan", "jkck", "hyoda"],
+  reva: ["reva", "gi", "cinqfrere", "huitfrere", "septsoeur"],
+  jabba: ["jabba", "boushh", "skifflando", "krrsantan", "boba"],
+  aphra: ["aphra", "ooo", "bt1", "ig88", "sonde"],
+  leiaGL: [],
+  lv: [],
+  rey: [],
+  sk: [],
+  slkr: [],
+  ufu: [],
+};
