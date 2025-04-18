@@ -2,33 +2,33 @@ import { ChsName, Sets } from "..";
 import { TeamTableProps } from "@core/domain/interfaces/TeamTableProps";
 import Images from "../../assets/images";
 
-const glatTeam: TeamTableProps = {
-  teamName: "GLAT",
+const leiaGLTeam: TeamTableProps = {
+  teamName: "leiagl",
   data: {
     characters: [
       {
-        name: ChsName.glat.name,
-        image: Images.glat,
+        name: ChsName.leiagl.name,
+        image: Images.leiagl,
         relic: "Rel 9",
       },
       {
-        name: ChsName.generalSyndulla.name,
-        image: Images.generalsyndu,
+        name: ChsName.r2d2.name,
+        image: Images.r2d2,
         relic: "Rel 7 / 8",
       },
       {
-        name: ChsName.huyang.name,
-        image: Images.huyang,
+        name: ChsName.drogan.name,
+        image: Images.drogan,
         relic: "Rel 7 / 8",
       },
       {
-        name: ChsName.padawanSabine.name,
-        image: Images.padawansabine,
+        name: "",
+        image: "",
         relic: "Rel 7 / 8",
       },
       {
-        name: ChsName.ezraBridgerExil.name,
-        image: Images.ezraexile,
+        name: "",
+        image: "",
         relic: "Rel 8 / 9",
       },
     ],
@@ -72,4 +72,4 @@ const glatTeam: TeamTableProps = {
   },
 };
 
-export default glatTeam;
+export default leiaGLTeam;

@@ -1,3 +1,4 @@
+import { AVAILABLE_TEAMS } from "@data/teamNames";
 import TeamModsTable from "@presentation/components/teamTable/TeamTable";
 import { notFound } from "next/navigation";
 
@@ -8,8 +9,10 @@ interface TeamPageProps {
 }
 
 // Fonction pour générer les paramètres statiques
-export function generateStaticParams() {
-  return [{ teamName: "jmk" }, { teamName: "glat" }];
+export async function generateStaticParams() {
+  return AVAILABLE_TEAMS.map((team) => ({
+    teamName: team.id,
+  }));
 }
 
 // Fonction pour charger les données de l'équipe

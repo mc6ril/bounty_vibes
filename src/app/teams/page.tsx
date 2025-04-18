@@ -4,11 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import styles from "./page.module.css";
-
-const AVAILABLE_TEAMS = [
-  { id: "jmk", name: "JMK Team" },
-  { id: "glat", name: "GLAT Team" },
-];
+import { AVAILABLE_TEAMS } from "@data/teamNames";
 
 export default function TeamsPage() {
   const [searchTerm, setSearchTerm] = useState("");
