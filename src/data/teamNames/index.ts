@@ -11,7 +11,7 @@ export const teams: Record<string, string[]> = {
   rey: [],
   sk: [],
   slkr: [],
-  ufu: ["test"],
+  ufu: [],
 };
 
 export const AVAILABLE_TEAMS = [
