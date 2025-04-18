@@ -45,6 +45,14 @@ enum Images {
   bt1 = "/images/bt-1.png",
   ig88 = "/images/ig88.png",
   sonde = "/images/sonde.png",
+  lordvador = "/images/lordvador.png",
+  admiralthrawn = "/images/admiralthrawn.png",
+  royalguard = "/images/royalguard.png",
+  maul = "/images/maul.png",
+  piett = "/images/piett.png",
+  leiagl = "/images/leiagl.png",
+  r2d2 = "/images/r2d2.png",
+  drogan = "/images/drogan.png",
 }
 
 export default Images;
