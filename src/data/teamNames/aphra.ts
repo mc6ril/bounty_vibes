@@ -1,72 +1,153 @@
-import { ChsName, Sets } from "..";
+import { Sets } from "..";
 import { TeamTableProps } from "@core/domain/interfaces/TeamTableProps";
 import Images from "../../assets/images";
+import { aphra as aphraData } from "@data/chs/aphra";
+import { ooo } from "@data/chs/ooo";
+import { bt1 } from "@data/chs/bt1";
+import { ig88 } from "@data/chs/ig88";
+import { sonde } from "@data/chs/sonde";
 
 const aphraTeam: TeamTableProps = {
   teamName: "Aphra",
   data: {
     characters: [
       {
-        name: ChsName.aphra.name,
-        image: Images.aphra,
-        relic: "Rel 9",
+        name: aphraData.name,
+        image: aphraData.image,
+        relic: aphraData.relic,
       },
       {
-        name: ChsName.ooo.name,
-        image: Images.ooo,
-        relic: "Rel 7 / 8",
+        name: ooo.name,
+        image: ooo.image,
+        relic: ooo.relic,
       },
       {
-        name: ChsName.bt1.name,
-        image: Images.bt1,
-        relic: "Rel 7 / 8",
+        name: bt1.name,
+        image: bt1.image,
+        relic: bt1.relic,
       },
       {
-        name: ChsName.ig88.name,
-        image: Images.ig88,
-        relic: "Rel 7 / 8",
+        name: ig88.name,
+        image: ig88.image,
+        relic: ig88.relic,
       },
       {
-        name: ChsName.sonde.name,
-        image: Images.sonde,
-        relic: "Rel 8 / 9",
+        name: sonde.name,
+        image: sonde.image,
+        relic: sonde.relic,
       },
     ],
     sets: [
       {
-        images: [Images.speed, Images.health],
+        images: aphraData.sets.images,
       },
       {
-        images: [Images.speed, Images.health],
+        images: ooo.sets.images,
       },
       {
-        images: [Images.attack, Images.crit],
+        images: bt1.sets.images,
       },
       {
-        images: [Images.dmgcrit, Images.health],
+        images: ig88.sets.images,
       },
       {
-        images: [Images.speed, Images.health],
+        images: sonde.sets.images,
       },
     ],
     primaryIcons: [Images.fleche, Images.triangle, Images.rond, Images.croix],
     primary: [
-      [Sets.primarySpeedHealth, Sets.speed, Sets.speed, Sets.speed, Sets.speed],
-      [Sets.primaryHealth, Sets.primaryHealthOrProt, Sets.primaryCritDmg, Sets.primaryCritDmg, Sets.primaryHealth],
-      [Sets.primaryHealth, Sets.primaryHealthOrProt, Sets.primaryHealthOrProt, Sets.primaryHealth, Sets.primaryHealth],
-      [Sets.primaryHealth, Sets.primaryHealthOrProt, Sets.primaryOffense, Sets.primaryOffense, Sets.primaryHealth],
+      [
+        aphraData.sets.primary.fleche,
+        ooo.sets.primary.fleche,
+        bt1.sets.primary.fleche,
+        ig88.sets.primary.fleche,
+        sonde.sets.primary.fleche,
+      ],
+      [
+        aphraData.sets.primary.triangle,
+        ooo.sets.primary.triangle,
+        bt1.sets.primary.triangle,
+        ig88.sets.primary.triangle,
+        sonde.sets.primary.triangle,
+      ],
+      [
+        aphraData.sets.primary.rond,
+        ooo.sets.primary.rond,
+        bt1.sets.primary.rond,
+        ig88.sets.primary.rond,
+        sonde.sets.primary.rond,
+      ],
+      [
+        aphraData.sets.primary.croix,
+        ooo.sets.primary.croix,
+        bt1.sets.primary.croix,
+        ig88.sets.primary.croix,
+        sonde.sets.primary.croix,
+      ],
     ],
     secondary: [
-      [Sets.secondaryHealth, Sets.speed, Sets.secondaryOffense, Sets.secondaryOffense, Sets.speed],
-      [Sets.secondaryDefense, Sets.secondaryHealthOrProt, Sets.speed, Sets.speed, Sets.secondaryHealth],
-      [Sets.speed, Sets.secondaryHealthOrProt, Sets.secondaryCritChance, Sets.secondaryHealth, Sets.secondaryOffense],
-      [Sets.secondaryOffense, "", Sets.secondaryOffenseFlat, Sets.secondaryOffenseFlat, Sets.secondaryHealthFlat],
+      [
+        aphraData.sets.secondary[1],
+        ooo.sets.secondary[1],
+        bt1.sets.secondary[1],
+        ig88.sets.secondary[1],
+        sonde.sets.secondary[1],
+      ],
+      [
+        aphraData.sets.secondary[2],
+        ooo.sets.secondary[2],
+        bt1.sets.secondary[2],
+        ig88.sets.secondary[2],
+        sonde.sets.secondary[2],
+      ],
+      [
+        aphraData.sets.secondary[3],
+        ooo.sets.secondary[3],
+        bt1.sets.secondary[3],
+        ig88.sets.secondary[3],
+        sonde.sets.secondary[3],
+      ],
+      [
+        aphraData.sets.secondary[4],
+        ooo.sets.secondary[4],
+        bt1.sets.secondary[4],
+        ig88.sets.secondary[4],
+        sonde.sets.secondary[4],
+      ],
     ],
     stats: [
-      [Sets.speed, "565+", "350+", "300+", "300+", "365+"],
-      [Sets.Others, "Health > 200k", "", "Attack > 9k", "Attack > 9k", "Health > 90k"],
-      ["", "Armor > 74%", "", "", "", ""],
-      ["", "Attack > 6k2", "", "", "", ""],
+      [
+        Sets.speed,
+        aphraData.sets.stats.speed,
+        ooo.sets.stats.speed,
+        bt1.sets.stats.speed,
+        ig88.sets.stats.speed,
+        sonde.sets.stats.speed,
+      ],
+      [
+        Sets.Others,
+        aphraData.sets.stats.other[1],
+        ooo.sets.stats.other[1],
+        bt1.sets.stats.other[1],
+        ig88.sets.stats.other[1],
+        sonde.sets.stats.other[1],
+      ],
+      [
+        Sets.Others,
+        aphraData.sets.stats.other[2],
+        ooo.sets.stats.other[2],
+        bt1.sets.stats.other[2],
+        ig88.sets.stats.other[2],
+        sonde.sets.stats.other[2],
+      ],
+      [
+        Sets.Others,
+        aphraData.sets.stats.other[3],
+        ooo.sets.stats.other[3],
+        bt1.sets.stats.other[3],
+        ig88.sets.stats.other[3],
+        sonde.sets.stats.other[3],
+      ],
     ],
     infos: "",
   },

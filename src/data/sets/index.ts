@@ -10,6 +10,7 @@ export const sets = {
   primaryProtection: "Protection",
   primaryTenacity: "Tenacity",
   primaryDefense: "Defense",
+  primaryPotency: "Pouvoir",
   primaryHealthOrProt: "Health / Protection",
   primarySpeedHealth: "Speed / Health",
 
@@ -23,4 +24,5 @@ export const sets = {
   secondaryTenacity: "Tenacity %",
   secondaryDefense: "Defense %",
   secondaryHealthOrProt: "Health / Protection %",
+  secondaryPotency: "Pouvoir %",
 };
