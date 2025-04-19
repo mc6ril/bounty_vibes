@@ -1,44 +1,82 @@
-import { Character } from "@core/domain/entities/Character";
 import { Team } from "@core/domain/entities/Team";
 import { ITeamRepository } from "@core/domain/interfaces/ITeamRepository";
-import { TeamsCharactersType, ChsNameType } from "@data/types";
 import { CharacterRepository } from "./CharacterRepository";
+import { AVAILABLE_TEAMS, teams } from "@data/teamNames";
+import { Character } from "@core/domain/entities/Character";
+import { CharacterSearchData } from "@data/types";
 
 export class TeamRepository implements ITeamRepository {
-  private teams: Team[] = [];
+  private static instance: TeamRepository;
+  private teams: Record<string, string[]>;
+  private availableTeams: { id: string; name: string }[];
   private characterRepository: CharacterRepository;
 
-  constructor(private readonly teamsCharacters: TeamsCharactersType, chsName: ChsNameType) {
-    this.characterRepository = new CharacterRepository(chsName);
-    this.initializeTeams();
+  private constructor() {
+    this.teams = teams;
+    this.availableTeams = AVAILABLE_TEAMS;
+    this.characterRepository = CharacterRepository.getInstance();
   }
 
-  private async initializeTeams() {
-    const characters = await this.characterRepository.getAll();
-
-    this.teams = Object.entries(this.teamsCharacters).map(([teamName, characterKeys]) => {
-      const teamCharacters = characterKeys
-        .map((key: string) => characters.find((char) => char.name.toLowerCase() === key.toLowerCase()))
-        .filter((char): char is Character => char !== undefined);
-
-      return new Team(teamName, teamCharacters);
-    });
+  public static getInstance(): TeamRepository {
+    if (!TeamRepository.instance) {
+      TeamRepository.instance = new TeamRepository();
+    }
+    return TeamRepository.instance;
   }
 
-  async getAll(): Promise<Team[]> {
+  public getAllTeams(): Record<string, string[]> {
     return this.teams;
   }
 
+  public getTeamById(id: string): string[] | undefined {
+    return this.teams[id];
+  }
+
+  public getAvailableTeams(): { id: string; name: string }[] {
+    return this.availableTeams;
+  }
+
+  public getTeamCharacters(teamId: string): string[] {
+    return this.teams[teamId] || [];
+  }
+
+  private convertToCharacter(characterData: CharacterSearchData): Character {
+    return new Character(characterData.name, characterData.tag);
+  }
+
+  async getAll(): Promise<Team[]> {
+    const allTeams = Object.entries(this.teams).map(([id, characterIds]) => {
+      const characters = characterIds
+        .filter((id) => id !== "")
+        .map((id) => this.characterRepository.getCharacterById(id))
+        .filter((char): char is NonNullable<typeof char> => char !== undefined)
+        .map((charData) => this.convertToCharacter(charData));
+      return new Team(id, characters);
+    });
+    return allTeams;
+  }
+
   async getByName(name: string): Promise<Team | undefined> {
-    return this.teams.find((team) => team.name.toLowerCase() === name.toLowerCase());
+    const teamId = this.availableTeams.find((team) => team.name.toLowerCase() === name.toLowerCase())?.id;
+    if (!teamId) return undefined;
+
+    const characterIds = this.getTeamCharacters(teamId);
+    const characters = characterIds
+      .filter((id) => id !== "")
+      .map((id) => this.characterRepository.getCharacterById(id))
+      .filter((char): char is NonNullable<typeof char> => char !== undefined)
+      .map((charData) => this.convertToCharacter(charData));
+
+    return new Team(teamId, characters);
   }
 
   async search(searchTerm: string): Promise<Team[]> {
-    return this.teams.filter((team) => team.matchesSearch(searchTerm));
+    const searchTermLower = searchTerm.toLowerCase();
+    return (await this.getAll()).filter((team) => team.name.toLowerCase().includes(searchTermLower));
   }
 
   async getTeamsByCharacter(characterName: string): Promise<Team[]> {
-    return this.teams.filter((team) =>
+    return (await this.getAll()).filter((team) =>
       team.characters.some((char) => char.name.toLowerCase() === characterName.toLowerCase()),
     );
   }

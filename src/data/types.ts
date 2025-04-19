@@ -10,3 +10,18 @@ export interface TeamData {
 export type ChsNameType = Record<string, CharacterData>;
 export type TeamsCharactersType = Record<string, string[]>;
 export type SetsType = Record<string, string>;
+
+export interface Team {
+  id: string;
+  name: string;
+  characters: string[];
+}
+
+export interface TeamConfig {
+  id: string;
+  name: string;
+}
+
+export interface CharacterSearchData extends CharacterData {
+  aliases?: string[];
+}
