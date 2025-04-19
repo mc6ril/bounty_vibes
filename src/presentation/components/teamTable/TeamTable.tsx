@@ -12,7 +12,7 @@ const TeamModsTable: React.FC<TeamTableProps> = ({ teamName, data }) => {
         style={{ width: "100%", borderCollapse: "collapse", textAlign: "center" }}>
         <thead>
           <tr>
-            <th colSpan={2}>Bounty Vibes</th>
+            <th colSpan={2}>QueensAndKings</th>
             {data.characters.map((char: Character, index: number) => (
               <th key={index}>
                 {char.image && (

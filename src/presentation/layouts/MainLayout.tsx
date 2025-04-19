@@ -17,7 +17,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       </header>
       <main>{children}</main>
       <footer className={styles.mainFooter}>
-        <p>© 2024 Bounty Vibes - Star Wars: Galaxy of Heroes Guide</p>
+        <p>© 2025 QueensAndKings - Star Wars: Galaxy of Heroes Guide</p>
       </footer>
     </div>
   );

@@ -18,7 +18,7 @@ export const HomePage: React.FC = () => {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1>Bounty Vibes</h1>
+        <h1>QueensAndKings</h1>
         <p>Your guide to the best teams in Star Wars: Galaxy of Heroes</p>
       </header>
       <div className={styles.grid}>
