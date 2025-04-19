@@ -47,11 +47,11 @@ export default function TeamsPage() {
   return (
     <div className={styles.container}>
       <div className={styles.searchSection}>
-        <h1>Team Search</h1>
+        <h1>{"Recherche d'équipe ou de personnage"}</h1>
         <div className={styles.searchContainer}>
           <input
             type="text"
-            placeholder="Search for a team or character (JMK, GLAT, Luke, Ahsoka)..."
+            placeholder="Rechercher un personnage ou une équipe (JMK, GLAT, Luke, Ahsoka)..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
@@ -60,62 +60,51 @@ export default function TeamsPage() {
           <button
             onClick={handleSearch}
             className={styles.searchButton}>
-            Search
+            Rechercher
           </button>
         </div>
 
         {/* Résultats de recherche */}
         {(searchResults.characters.length > 0 || searchResults.teams.length > 0) && (
           <div className={styles.searchResults}>
-            {searchResults.characters.length > 0 && (
-              <div className={styles.characterResults}>
-                <div className={styles.resultList}>
-                  {searchResults.characters.map((character) => (
-                    <div
-                      key={character.name}
-                      className={styles.resultItem}>
-                      <span>{character.name}</span>
-                      <div className={styles.tags}>
-                        {character.tag.map((tag) => (
-                          <span
-                            key={tag}
-                            className={styles.tag}>
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+            {searchResults.characters.map((character) => (
+              <div key={character.name}>
+                <span className={styles.characterName}>{character.name}</span>
+                <div className={styles.tags}>
+                  {character.tag.map((tag) => (
+                    <span
+                      key={tag}
+                      className={styles.tag}>
+                      {tag}
+                    </span>
                   ))}
                 </div>
+                <div className={styles.teamLinks}>
+                  {searchResults.teams
+                    .filter((team) => team.characters.some((char) => char.name === character.name))
+                    .map((team) => (
+                      <div key={team.name}>
+                        {/* A modifier plus tard pour avoir un lien vers la page du personnage et non de l'équipe */}
+                        <div className={styles.tags}>
+                          {team.characters.map((char) => (
+                            <span
+                              key={char.name}
+                              className={styles.tag}>
+                              {char.name}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                </div>
               </div>
-            )}
-
-            {searchResults.teams.length > 0 && (
-              <div className={styles.searchResults}>
-                {searchResults.teams.map((team) => (
-                  <Link
-                    key={team.name}
-                    href={`/teams/${team.name}`}
-                    className={styles.resultItem}>
-                    <div className={styles.tags}>
-                      {team.characters.map((char) => (
-                        <span
-                          key={char.name}
-                          className={styles.tag}>
-                          {char.name}
-                        </span>
-                      ))}
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            )}
+            ))}
           </div>
         )}
       </div>
 
       <div className={styles.quickAccess}>
-        <h2>Quick Access</h2>
+        <h2>Accès rapide</h2>
         <div className={styles.teamButtons}>
           {filteredTeams.map((team) => (
             <Link
