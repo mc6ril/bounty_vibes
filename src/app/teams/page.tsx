@@ -1,57 +1,121 @@
 "use client";
 
-import React, { useState } from "react";
-import "./page.css";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { ChsName, TeamNameKey, teamsArray, teamsCharacters } from "@/data";
+import styles from "./page.module.css";
+import { AVAILABLE_TEAMS } from "@data/teamNames";
+import { SearchService } from "@infrastructure/services/SearchService";
+import { CharacterSearchData } from "@data/types";
+import { Team } from "@core/domain/entities/Team";
 
-export default function Page() {
-  const [search, setSearch] = useState("");
+export default function TeamsPage() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState<{
+    characters: CharacterSearchData[];
+    teams: Team[];
+  }>({ characters: [], teams: [] });
+  const router = useRouter();
+  const searchService = SearchService.getInstance();
 
-  // Fonction pour filtrer les équipes
-  const filteredTeams = teamsArray.filter((team: TeamNameKey) => {
-    const characterKeys = teamsCharacters[team] || [];
+  useEffect(() => {
+    const search = async () => {
+      if (searchTerm.length > 2) {
+        const results = await searchService.searchAll(searchTerm);
+        setSearchResults(results);
+      } else {
+        setSearchResults({ characters: [], teams: [] });
+      }
+    };
 
-    // Vérifier si le nom de l'équipe correspond
-    const matchTeamName = team.toLowerCase().includes(search.toLowerCase());
+    const debounceTimer = setTimeout(search, 300);
+    return () => clearTimeout(debounceTimer);
+  }, [searchService, searchTerm]);
 
-    const matchCharacterName = characterKeys.some((charKey) =>
-      ChsName[charKey]?.name.toLowerCase().includes(search.toLowerCase()),
-    );
+  const handleSearch = () => {
+    if (searchResults.teams.length > 0) {
+      router.push(`/teams/${searchResults.teams[0].name}`);
+    }
+  };
 
-    // Vérifier si un des personnages a un tag qui correspond
-    const matchCharacterTag = characterKeys.some((charKey) =>
-      ChsName[charKey]?.tag.some((tag) => tag.toLowerCase().includes(search.toLowerCase())),
-    );
-
-    return matchTeamName || matchCharacterName || matchCharacterTag;
-  });
+  const filteredTeams = AVAILABLE_TEAMS.filter(
+    (team) =>
+      team.id.includes(searchTerm.toLowerCase().trim()) ||
+      team.name.toLowerCase().includes(searchTerm.toLowerCase().trim()),
+  );
 
   return (
-    <div className="container">
-      <header className="header">
-        <h1>List of teams</h1>
-      </header>
-      <input
-        type="text"
-        placeholder="Find a team..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        className="search-input"
-      />
-      <div className="grid">
-        {filteredTeams.length > 0 ? (
-          filteredTeams.map((team) => (
-            <Link
-              key={team}
-              className="card"
-              href={`/teams/${team}`}>
-              {team}
-            </Link>
-          ))
-        ) : (
-          <p className="no-results">No teams found</p>
+    <div className={styles.container}>
+      <div className={styles.searchSection}>
+        <h1>{"Recherche d'équipe ou de personnage"}</h1>
+        <div className={styles.searchContainer}>
+          <input
+            type="text"
+            placeholder="Rechercher un personnage ou une équipe (JMK, GLAT, Luke, Ahsoka)..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+            className={styles.searchInput}
+          />
+          <button
+            onClick={handleSearch}
+            className={styles.searchButton}>
+            Rechercher
+          </button>
+        </div>
+
+        {/* Résultats de recherche */}
+        {(searchResults.characters.length > 0 || searchResults.teams.length > 0) && (
+          <div className={styles.searchResults}>
+            {searchResults.characters.map((character) => (
+              <div key={character.name}>
+                <span className={styles.characterName}>{character.name}</span>
+                <div className={styles.tags}>
+                  {character.tag.map((tag) => (
+                    <span
+                      key={tag}
+                      className={styles.tag}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className={styles.teamLinks}>
+                  {searchResults.teams
+                    .filter((team) => team.characters.some((char) => char.name === character.name))
+                    .map((team) => (
+                      <div key={team.name}>
+                        {/* A modifier plus tard pour avoir un lien vers la page du personnage et non de l'équipe */}
+                        <div className={styles.tags}>
+                          {team.characters.map((char) => (
+                            <span
+                              key={char.name}
+                              className={styles.tag}>
+                              {char.name}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                </div>
+              </div>
+            ))}
+          </div>
         )}
+      </div>
+
+      <div className={styles.quickAccess}>
+        <h2>Accès rapide</h2>
+        <div className={styles.teamButtons}>
+          {filteredTeams.map((team) => (
+            <Link
+              key={team.id}
+              href={`/teams/${team.id}`}
+              className={styles.teamButton}>
+              {team.name}
+            </Link>
+          ))}
+          {filteredTeams.length === 0 && <p className={styles.noResults}>No teams found matching your search</p>}
+        </div>
       </div>
     </div>
   );

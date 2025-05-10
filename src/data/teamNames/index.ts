@@ -1,0 +1,31 @@
+export const teams: Record<string, string[]> = {
+  jmk: ["jmk", "cat", "ashokaSnips", "padmeAmidala", "generalKenobi"],
+  glat: ["glat", "ezraBridgerExil", "generalSyndulla", "huyang", "padawanSabine"],
+  cls: ["cls", "chewbacca", "c3po", "hansolo", "threepio"],
+  jml: ["jml", "jkl", "revan", "jkck", "hyoda"],
+  reva: ["reva", "gi", "cinqfrere", "huitfrere", "septsoeur"],
+  jabba: ["jabba", "boushh", "skifflando", "krrsantan", "boba"],
+  aphra: ["aphra", "ooo", "bt1", "ig88", "sonde"],
+  leiagl: ["leiagl", "r2d2", "drogan", "", ""],
+  lv: ["lordvador", "piett", "admiralthrawn", "maul", "royalguard"],
+  rey: [],
+  sk: [],
+  slkr: [],
+  ufu: [],
+};
+
+export const AVAILABLE_TEAMS = [
+  { id: "rey", name: "Rey Team" },
+  { id: "sk", name: "SK Team" },
+  { id: "sklr", name: "SKLR Team" },
+  { id: "ufu", name: "UFU Team" },
+  { id: "jmk", name: "JMK Team" },
+  { id: "jml", name: "JML Team" },
+  { id: "leiagl", name: "Leia GL Team" },
+  { id: "lv", name: "LV Team" },
+  { id: "reva", name: "Reva Team" },
+  { id: "aphra", name: "Aphra Team" },
+  { id: "cls", name: "CLS Team" },
+  { id: "glat", name: "GLAT Team" },
+  { id: "jabba", name: "Jabba Team" },
+];
